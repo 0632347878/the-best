@@ -293,6 +293,11 @@ li.icon {
 .search-w .cost span {
   line-height: 30px;
 }
+.search-w .cost label {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 .search-w .city {
   flex-basis: 165px;
 }
@@ -417,4 +422,30 @@ li.icon {
 }
 .description-slider .exchange {
   background: #f1f1f2 url(../images/exchange.png) no-repeat 10px center;
+}
+section.fresh-realty {
+  margin-top: 35px;
+}
+section.fresh-realty h2 {
+  color: #74b64d;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 7px;
+}
+section.fresh-realty h2 + span {
+  text-align: center;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  color: #333;
+}
+section.fresh-realty h2 + span a {
+  color: #0088cf;
+}
+section.fresh-realty .realty-w {
+  display: flex;
+}
+section.fresh-realty .realty-col-1 {
+  flex: 1 1 45%;
 }

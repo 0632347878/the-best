@@ -338,6 +338,11 @@ body {
 	  span {
 	  	line-height: 30px;
 	  }
+	  label {
+	  	display: block;
+	  	width: 100%;
+	  	text-align: center;
+	  }
 	}
 	.city {
 		flex-basis: 165px;
@@ -455,5 +460,32 @@ body {
 	}
 	.exchange {
 		background: #f1f1f2  url(../images/exchange.png) no-repeat 10px center;
+	}
+}
+
+section.fresh-realty {
+	margin-top: 35px;
+	h2 {
+		color: #74b64d;
+		font-size: 24px;
+		font-weight: 600;
+		text-align: center;
+		margin-bottom: 7px;
+	}
+	h2+span {
+		text-align: center;
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		color: #333;
+		a {
+			color: @link-color;
+		}
+	}
+	.realty-w {
+		display: flex;
+	}
+	.realty-col-1 {
+		flex: 1 1 45%;
 	}
 }
