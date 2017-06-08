@@ -9,6 +9,8 @@
   <title>index</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/all.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,7 +68,6 @@
         </div>
         <div class="reward">
           <img src="images/gold-sertificate.png" alt="gold-sertificate">
-
           <a href="#">
             ВТБ Банк Москвы наградил компанию БЕСТ-Недвижимость
           </a>
@@ -84,14 +85,126 @@
           <li><a href="#">Партнерам</a></li>
           <li class="leave-order"><a href="#">Оставить заявку</a></li>
           <li class="icon"><a href="javasctipt:void(0);" style="font-size: 15px;" onclick="myFunction()">&#9776;</a></li>
-        </ul> 
+        </ul>
       </div>
     </div>
+    <div class="search-w">
+      <div class="search page-content">
+        <form class="search-form" action="">
+          <div class="realty">
+            <label>Недвижимость</label>
+            <select class="first-select">
+              <option data-display="Купить квартиру">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <div class="rooms">
+            <label>Количество комнат</label>
+            <select class="second-select">
+              <option data-display="Комнат">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <div class="cost">
+            <p>Цена, Руб.</p>
+            <input class="nice-select" type="text" placeholder="От">
+            <span>&ndash;</span>
+            <input class="nice-select" type="text" placeholder="До">
+          </div>
+          <div class="city">
+            <label>Город, область</label>
+            <select class="third-select">
+              <option data-display="Все">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <input type="submit" value="Найти">
+          <button class="view-on-map">
+            Показать на карте
+          </button>
+        </form>
+        <a class="search-more" href="#">Расширенный поиск</a>
+      </div>
+    </div>
+  </div>
+  <div class="main page-content">
+    <section class="section-slider">
+      <div class="main-slider">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="images/slide1.jpg" alt="slide1">
+              <div class="slide-content">
+                <div class="slide-content__top">
+                  <p>УДИВИТЕЛЬНО</p>
+                  <p>НИЗКИЕ ЦЕНЫ</p>
+                </div>
+                <div class="slide-content__bottom">
+                  <p>На квартиры</p>
+                  <p>В ЖК "АФРОДИТА"</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/slide2.jpg" alt="slide1">
+              <div class="slide-content">
+                <div class="slide-content__top">
+                  <p>УДИВИТЕЛЬНО</p>
+                  <p>НИЗКИЕ ЦЕНЫ</p>
+                </div>
+                <div class="slide-content__bottom">
+                  <p>На квартиры</p>
+                  <p>В ЖК "АФРОДИТА"</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/slide1.jpg" alt="slide1">
+              <div class="slide-content">
+                <div class="slide-content__top">
+                  <p>УДИВИТЕЛЬНО</p>
+                  <p>НИЗКИЕ ЦЕНЫ</p>
+                </div>
+                <div class="slide-content__bottom">
+                  <p>На квартиры</p>
+                  <p>В ЖК "АФРОДИТА"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="description-slider">
+        <div class="mark"><a href="#">Экспресс - оценка недвижимости</a></div>
+        <div class="credit"><a href="#">Центр ипотечного кредитования</a></div>
+        <div class="exchange"><a href="#">Обменяйте старую квартиру на новую</a></div>
+      </div>
+    </section>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
   <!-- <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
@@ -103,6 +216,24 @@
       }
     }
   </script> -->
+  <script>
+  $(document).ready(function() {
+    $('.first-select, .second-select, .third-select').niceSelect();
+  });
+  </script>
+  <script>
+  var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // autoplay: 2000,
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+  })
+  </script>
 </body>
 
 </html>
