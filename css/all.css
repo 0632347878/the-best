@@ -1,0 +1,223 @@
+.page-content {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+body {
+  min-width: 320px;
+  font: 14px/1.4 'Open Sans', sans-serif;
+  color: #10142f;
+  background: #fff;
+}
+.nav-top-w {
+  background-color: #dff2f8;
+  line-height: 32px;
+}
+.nav-top {
+  display: flex;
+}
+.nav-top .menu-top {
+  display: flex;
+}
+.nav-top a {
+  color: #0088cf;
+  margin: 0 15px;
+  font-size: 13px;
+}
+.nav-top a i {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  border-color: #5da8da;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+.nav-top a .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.nav-top a:hover {
+  text-decoration: underline;
+}
+.nav-top .social {
+  margin-left: auto;
+}
+.nav-top .social .vk {
+  background-image: url(../images/vk.png);
+  width: 28px;
+  height: 16px;
+}
+.nav-top .social .facebook {
+  width: 8px;
+  height: 16px;
+  background-image: url(../images/fb.png);
+}
+.nav-top .social .instagram {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/instagram.png);
+}
+.nav-top .social .star {
+  width: 17px;
+  height: 16px;
+  background-image: url(../images/star.png);
+}
+.nav-top .social *:not(:last-child) {
+  display: inline-block;
+}
+.nav-top .social a {
+  margin: 0 7px;
+}
+.header-w {
+  display: flex;
+  padding: 15px 0 15px 15px;
+}
+.header-left {
+  display: flex;
+  width: 58%;
+}
+.header-left .logo {
+  margin-right: 4%;
+  width: 30%;
+  max-width: 180px;
+}
+.header-left .phone {
+  text-align: right;
+  padding-left: 30px;
+  background: url(../images/phone-icon.png) no-repeat left 40%;
+  margin-right: 4%;
+  width: 30%;
+  max-width: 180px;
+}
+.header-left .phone a {
+  font-size: 14px;
+  color: #0088cf;
+  border-bottom: 1px dashed #0088cf;
+}
+.header-left .phone span {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+.header-left .phone p {
+  font-size: 11px;
+  color: #999;
+}
+.header-left .contacts {
+  background: url(../images/location.png) no-repeat 5px center;
+  width: 40%;
+  padding-left: 40px;
+  text-align: right;
+  max-width: 235px;
+  line-height: 1.1;
+}
+.header-left .contacts p {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 5px;
+}
+.header-left .contacts span {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+.header-left .contacts a {
+  color: #0088cf;
+  font-size: 11px;
+}
+.header-right {
+  flex-basis: 42%;
+  padding-left: 15px;
+  display: flex;
+}
+.header-right .deal {
+  width: 40%;
+  margin-right: 7%;
+}
+.header-right .deal img {
+  min-width: 170px;
+}
+.header-right .deal p {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+}
+.header-right .certificate {
+  width: 17%;
+  margin-right: 9%;
+}
+.header-right .certificate span {
+  margin-top: 5px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+}
+.header-right .reward {
+  display: flex;
+  align-items: center;
+  width: 43%;
+}
+.header-right .reward img {
+  max-width: 23px;
+  margin-right: 15px;
+}
+.header-right .reward a {
+  font-size: 11px;
+  color: #0099cc;
+  text-decoration: underline;
+}
+.header-menu-w {
+  background-color: #0088cf;
+}
+.header-menu .topnav {
+  display: flex;
+}
+.header-menu .topnav li:first-child a {
+  padding-left: 15px;
+  color: #0e2470;
+  background-color: #77cfea;
+  padding-right: 15px;
+}
+.header-menu .topnav li:first-child a i {
+  margin-left: 25px;
+  font-size: 18px;
+  line-height: 0;
+  transform: translateY(2px);
+  display: inline-block;
+}
+.header-menu .topnav li:first-child a:hover {
+  text-decoration: none;
+}
+.header-menu .topnav a {
+  display: inline-block;
+  color: #fff;
+  padding: 16px 30px;
+  transition: .4s;
+}
+.header-menu .topnav a:hover {
+  color: #77cfea;
+  text-decoration: underline;
+  transition: .4s;
+}
+.header-menu .topnav li:not(:first-child):not(:nth-child(n+6)):after {
+  content: "|";
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  color: #fff;
+  opacity: .7;
+}
+.header-menu .topnav .leave-order {
+  background-color: #74b64d;
+  background-image: url(../images/order.png);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+.header-menu .topnav .leave-order a {
+  padding-right: 45px;
+}
+.header-menu li.icon {
+  display: none;
+}
