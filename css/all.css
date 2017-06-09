@@ -1,3 +1,18 @@
+.star__enable {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../images/star-enable.png);
+}
+.star__disable {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../images/star-disable.png);
+}
+a {
+  color: #0088cf;
+}
 .page-content {
   max-width: 1170px;
   margin: 0 auto;
@@ -425,6 +440,7 @@ li.icon {
 }
 section.fresh-realty {
   margin-top: 35px;
+  margin-bottom: 40px;
 }
 section.fresh-realty h2 {
   color: #74b64d;
@@ -445,7 +461,266 @@ section.fresh-realty h2 + span a {
 }
 section.fresh-realty .realty-w {
   display: flex;
+  margin-top: 30px;
 }
-section.fresh-realty .realty-col-1 {
-  flex: 1 1 45%;
+section.fresh-realty .realty-col {
+  flex: 1 1 calc(20% - 15px);
+  padding-left: 15px;
+}
+section.fresh-realty .realty-col li:not(:first-child) {
+  margin: 6px 0;
+}
+section.fresh-realty .realty-col a:hover {
+  color: #74b64d;
+  text-decoration: underline;
+  transition: .4s;
+}
+section.fresh-realty .realty-col a {
+  transition: .4s;
+}
+section.fresh-realty .realty-col h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+section.propositions .propositions-title-w {
+  background-color: #e5e5e5;
+}
+.propositions-title-inner {
+  display: flex;
+  min-height: 67px;
+  /*padding: 17px 0 12px;*/
+  padding: 0 20px;
+  align-items: center;
+  align-content: center;
+}
+.propositions-title-inner h2 {
+  color: #0088cf;
+  font-size: 24px;
+  font-weight: 500;
+}
+.propositions-title-inner .propositions__price {
+  flex: 0 1 165px;
+  min-height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px #ccc solid;
+}
+.propositions-title-inner .propositions-group {
+  display: flex;
+  justify-content: center;
+  margin-left: 4%;
+  width: 43%;
+  align-items: center;
+  border-radius: 5px;
+}
+.propositions-title-inner .propositions-group a:not(:last-child) {
+  margin-right: 6%;
+}
+.propositions-title-inner .propositions-group a:not(:first-child) {
+  border-bottom: 1px dashed #0088cf;
+}
+.propositions-title-inner .propositions-more {
+  padding-left: 30px;
+  background: url(../images/reverce.png) no-repeat 0 center;
+  margin-left: auto;
+  display: inline-block;
+}
+.propositions-result {
+  display: flex;
+  padding: 0 5px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.propositions-result .propositions-col {
+  flex: 1 1 25%;
+  margin: 0 15px;
+  max-width: 260px;
+  border: 1px #ccc solid;
+}
+.propositions-result .propositions-col figure {
+  position: relative;
+  overflow: hidden;
+  max-width: 260px;
+  max-height: 210px;
+  height: auto;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+.propositions-result .propositions-col figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+.propositions-result .propositions-col figure figcaption {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.propositions-result .propositions-col figure figcaption a {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  height: 100%;
+}
+.propositions-result .propositions-col figure figcaption ::before,
+.propositions-result .propositions-col figure figcaption ::after {
+  pointer-events: none;
+}
+.propositions-result .propositions-col figure figcaption .propositions-hover {
+  position: absolute;
+  height: 45px;
+  bottom: 0;
+  width: 100%;
+}
+.propositions-result .propositions-col figure figcaption .propositions-hover .stars {
+  width: 100px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+}
+.propositions-result .propositions-col figure:hover .propositions-hover {
+  background: rgba(51, 51, 51, 0.4);
+  transition: .2s;
+}
+.propositions-result .propositions-col figure + a {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+  margin-top: 12px;
+}
+.propositions-result .propositions-col p {
+  font-size: 11px;
+  color: #999;
+  margin: 5px 0 12px;
+}
+.propositions-result .propositions-col .cost-line {
+  background-color: #74b64d;
+  min-height: 43px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.propositions-result .propositions-col .cost-line .cost-value {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.propositions-result .propositions-col .cost-line .hypotec {
+  padding-left: 28px;
+  background: url(../images/house-icon.png) no-repeat 0 center;
+  font-size: 12px;
+  color: #000;
+  margin-left: auto;
+  font-weight: 500;
+  padding-top: 2px;
+}
+.propositions-result .propositions-col .propositions-parametrs {
+  padding: 20px 15px;
+}
+.propositions-result .propositions-col .propositions-parametrs p {
+  font-size: 13px;
+  color: #333;
+}
+.propositions-result .propositions-col .propositions-parametrs a:before {
+  content: url(../images/blue-location.png);
+  display: inline-block;
+  width: 14px;
+  height: 24px;
+}
+.propositions-result a.propositions-photo-count {
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-left: 25px;
+  display: inline-block;
+  background: url(../images/camera.png) no-repeat 0 center;
+}
+.propositions-result a.propositions-photo-count span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.effect-julia img {
+  max-width: none;
+  height: 400px;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.effect-julia figcaption {
+  text-align: left;
+}
+.effect-julia p,
+.propositions-photo-count,
+.stars {
+  display: inline-block;
+  color: #2f3238;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 75%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-360px, 0, 0);
+  transform: translate3d(-360px, 0, 0);
+}
+.effect-julia p:first-child {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.effect-julia p:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.effect-julia p:nth-of-type(3) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+.effect-julia:hover p:first-child,
+.effect-julia:hover .propositions-photo-count,
+.effect-julia:hover .stars {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.effect-julia:hover p:nth-of-type(2) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+.effect-julia:hover p:nth-of-type(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.effect-julia:hover img {
+  opacity: 0.4;
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+.effect-julia:hover p,
+.effect-julia:hover .propositions-photo-count {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.effect-julia:hover .stars {
+  opacity: 1;
+  transform: translateY(-50%) translate3d(0, 0, 0);
+}
+@media (min-width: 1200px) {
+  .realty-col:last-child h3 {
+    white-space: nowrap;
+  }
 }
