@@ -1,25 +1,41 @@
+/*fs*/
 @base-fs: 14px;
 @article-title-fs: 24px;
 @base-color: #10142f;
 @sm-fs:12px;
 @link-fs: 13px;
+/*color*/
 @link-color: #0088cf; 
 @sm-color: #363636;
-@btn--color: #fdbc3b;
+/*btn*/
+@btn-color-orange: #fdbc3b;
+@btn-color-white: #fff;
+@lighten-percentage: 10%;
+@darken-percentage: 20%;
+@default-transition: .4s;
+
+
+.lighten() {
+	background: lighten(@btn-color-orange, @lighten-percentage);
+
+}
+.darken()  {
+	background: darken(@btn-color-white, @lighten-percentage);
+	
+}
+
 
 .clearfix() {
-    *zoom: 1;
-
-    &:before,
-    &:after {
-        display: table;
-        line-height: 0;
-        content: "";
-    }
-
-    &:after {
-        clear: both;
-    }
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
 }
 
  
@@ -72,8 +88,6 @@ body {
 	color: @base-color;
 	background: #fff;
 }
-
-
 
 .nav-top-w {
 	background-color: #dff2f8;
@@ -133,7 +147,6 @@ body {
 		}
 		a {
 			margin: 0 7px;
-
 		}
 	}
 }
@@ -306,11 +319,18 @@ body {
 		flex-basis: 166px;
 		min-height: 34px;
 		margin-top: 20px;
+		line-height: 30px;
+    padding-top: 4px;
+    cursor: pointer;
+		transition: .4s;
 		.btn-orange();
 		border: none;
 		color: #fff;
 		font-weight: bold;
 		font-size: 18px;
+		&:hover {
+			background: darken(@btn-color-orange, @darken-percentage)
+		}
 	}
 	form {
 		display: flex;
@@ -334,6 +354,12 @@ body {
 		flex-basis: 166px;
 		margin-top: 20px;
 		font-size: 14px;
+		transition: .4s;
+		cursor: pointer;
+		&:hover {
+			background: #fff url(../images/blue-location.png) no-repeat 7px center;
+			transition: .4s;
+		}
 	}
 	.search {
 		padding: 20px 15px 10px;
@@ -557,6 +583,11 @@ section.propositions {
 		text-align: center;
 		border-radius: 5px;
 		border: 1px #ccc solid;
+		transition: .4s;
+		&:hover {
+				background: darken(@btn-color-white, 20%);
+				transition: .4s;
+		}
 	}
 	.propositions-group {
 		display: flex;
@@ -590,7 +621,24 @@ section.propositions {
 		margin: 0 15px;
 		max-width: 260px;
 		border: 1px #ccc solid;
-		figure {
+		.propositions-hover {
+			position: absolute;
+			height: 45px;
+			bottom: 0;
+			width: 100%;
+
+			.stars {
+				width: 100px;
+				position: absolute;
+				right: 5px;
+				top: 50%;
+			}
+		}
+
+		.adress {
+			padding: 0 10px;
+		}
+		figure.effect-julia {
 			position: relative;
 			overflow: hidden;
 			max-width: 260px;
@@ -626,31 +674,9 @@ section.propositions {
 				::before,::after {
 					pointer-events: none;
 				}
-				.propositions-hover {
-					position: absolute;
-					height: 45px;
-					bottom: 0;
-					width: 100%;
-					.stars {
-						width: 100px;
-						position: absolute;
-						right: 5px;
-						top: 50%;
-					}
-				}
-			}
-			&:hover .propositions-hover {
-				background: rgba(51, 51, 51, .4);
-				transition: .2s;
 			}
 		}
-		figure+a {
-			font-size: 18px;
-			font-weight: 500;
-			display: block;
-			line-height: 1;
-			margin-top: 12px;
-		}
+
 		p {
 			.grey-desc();
 			margin: 5px 0 12px;
@@ -780,8 +806,47 @@ section.propositions {
 .effect-julia:hover .stars {
 	opacity: 1;
 	transform: translateY(-50%) translate3d(0,0,0); 
-
 }
+.hot-proposition {
+	line-height: 68px;
+	
+	.hot-proposition-title {
+		
+		background:  #ee5f3a url(../images/money-bg.png) no-repeat;
+	}
+	h2 {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 500;
+		color: #fff;
+	}
+}
+section.hot-proposition {
+	.hot-col {
+
+	}
+}
+.hot-result {
+	margin: 25px auto;
+}
+
+/*reuse*/
+.col__title-link {
+	font-size: 18px;
+	font-weight: 500;
+	display: block;
+	line-height: 1;
+	margin-top: 12px;
+	padding: 0 10px;
+}
+figure {
+	&:hover .propositions-hover {
+		background: rgba(51, 51, 51, .4);
+		transition: .2s;
+	}
+}
+/*end reuse*/
+
 
 
 @media (min-width: 1200px) {
