@@ -736,7 +736,10 @@ section.propositions .propositions-title-w {
   line-height: 68px;
 }
 .hot-proposition .hot-proposition-title {
-  background: #ee5f3a url(../images/money-bg.png) no-repeat;
+  background: #ee5f3a ;
+}
+.hot-proposition .hot-proposition-title .page-content {
+  background: url(../images/money-bg.png) no-repeat;
 }
 .hot-proposition h2 {
   text-align: center;
