@@ -438,13 +438,6 @@ body {
 		border-bottom: 1px @link-color dashed;
 	}
 }
-.section-slider {	
-	margin-top: 15px;
-	.clearfix();
-	.main-slider {
-		width: 74%;
-		float: left;
-		margin-right: 15px;
 		.swiper-button-prev, .swiper-button-next {
 			background-image: url(../images/left-arrow.png);
 			width: 25px;
@@ -455,6 +448,14 @@ body {
 		.swiper-button-next {
 			transform: rotate(180deg);
 		}
+
+.section-slider {	
+	margin-top: 15px;
+	.clearfix();
+	.main-slider {
+		width: 74%;
+		float: left;
+		margin-right: 15px;
 	}
 
 	.swiper-slide {
@@ -954,18 +955,21 @@ section.selection-form {
 		}
 	}
 }
-.selection-form-inner {
-	padding: 30px 0 50px 15px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	h3 {
+
+	h3.form-inner__title {
 		font: 30px/1 'OpenSans-CondensedLight';
 		color: #fff;
 		display: inline-block;
 		border-left: 4px #fff solid;
 		padding-left: 25px;
 	}
+
+.selection-form-inner {
+	padding: 30px 0 50px 15px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
 	form {
 	
 		input[type="submit"] {
@@ -1007,7 +1011,6 @@ section.selection-form {
 				background: darken(@btn-color-orange, @darken-percentage)
 			}
 		}
-	
 	} 
 }
 section.services {
@@ -1377,13 +1380,14 @@ section.services {
 }
 /* all */
 .rewards {
-	padding: 0 15px;
+	
 	.swiper-container3 {
 		width: 1170px;
-		height: 155px;
+		height: 165px;
 		position: relative;
-		
-		.swiper-button-prev3, .swiper-button-next3 {
+		overflow: hidden;
+
+		.swiper-button-prev, .swiper-button-next {
 			position: absolute;
 			width: 17px;
 			height: 32px;
@@ -1392,21 +1396,24 @@ section.services {
 			top: 50%;
 			z-index: 20;
 		}
-		.swiper-button-prev3 {
+		.swiper-button-prev {
 			left: 0;
 		}
-		.swiper-button-next3 {
+		.swiper-button-next {
 			transform: rotate(180deg);
-			right: -30px; 
+			right: 0; 
 		}
 		/*overflow: hidden;*/
 		.swiper-wrapper {
-			justify-content: space-around;
-			padding: 0 15px;
+			/*justify-content: space-around;*/
+			/*padding: 0 15px;*/
 			
 		}
 		.swiper-slide {
-			max-width: 105px;
+			img {	
+				max-width: 110px;
+				margin: 0 auto;
+			}
 
 		}
 	}
@@ -1417,13 +1424,16 @@ section.services {
 
 .bottom-articles {
 	display: flex;
-	padding: 0 15px;
+	padding: 0 15px 40px;
+
 }
 .bottom-articles-col {
-	flex: 1 1 ~"calc(33.3% - 15px)";
+	flex: 0 0 ~"calc(33.3% - 15px)";
 	margin-right: 2.5%;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
+
 	.article__data {
 		.grey-desc();
 		font-size: 12px;
@@ -1453,7 +1463,9 @@ section.services {
 	.bottom-articles__all {
 		text-align: right;
 		display: block;
-		
+		display: flex;
+		flex-grow: 1;
+		align-items: flex-end;
 		&:hover {
 			text-decoration: underline;
 			
@@ -1476,11 +1488,98 @@ section.services {
 	  		display: inline-block;
 	  		vertical-align: middle;
 	  		margin-right: 5px;
-	  		
-	  		
 	  	}
 	  }
 	}  
+}
+
+.hot-form {
+	background: #ee5f3a url(../images/hot-bg.png) no-repeat left -20px center;
+	.hot-form-holder {
+		width: 65%;
+		margin-left: 2.5%;
+		form {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+ 
+  .selection-form-inner2 {
+  	padding: 48px 15px 48px;
+  	width: 100%;
+  	display: flex;
+  	align-items: center;
+  	input[type="text"] {
+  		background: #fff url(../images/hot-mail-icon.png) no-repeat right 7px center;
+  		min-height: 50px;
+  		max-width: 460px;
+  		width: 100%;
+  		padding: 0 45px 0 30px;
+  		border-radius: 5px;
+  		border: none;
+  		outline: none;
+  	}
+  	input[type="submit"] {
+  		border: none;
+	    min-height: 50px;
+	    max-width: 260px;
+	    background-color: #fdbc3b;
+	    cursor: pointer;
+	    transition: .4s;
+	    border-radius: 5px;
+	    width: 100%;
+	    color: #fff;
+	    font-weight: bold;
+	    font-size: 24px;
+	    font: bold 24px/1.4 'Open Sans', sans-serif;
+	    text-shadow: 0 2px 2px #7e5e1d;
+	    transition: .4s;
+	    &:hover {
+	    	transition: .4s;
+	    	background: #d08b02;
+	    }
+  	}
+  }
+}
+
+.partners {
+	padding: 40px 15px 0; 
+	h2 {
+		text-align: center;
+	}
+	.swiper-container4 {
+		position: relative;
+		overflow: hidden;
+		margin-top: 40px;
+		img {
+			width: auto;
+			
+		}
+		.swiper-wrapper {
+			align-items: center;
+			.swiper-slide {
+				img {
+					margin: 0 auto;
+				}
+			}
+		}
+		.swiper-button-prev, .swiper-button-next {
+			position: absolute;
+			width: 17px;
+			height: 32px;
+			background: url(../images/reward-arrow-l.png) no-repeat;
+			cursor: pointer;
+			top: 50%;
+			z-index: 20;
+		}
+		.swiper-button-prev {
+			left: 0;
+		}
+		.swiper-button-next {
+			transform: rotate(180deg);
+			right: 0; 
+		}
+	}
 }
 
 
