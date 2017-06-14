@@ -64,8 +64,12 @@
           <p>Ваша сделка застрахована</p>
         </div>
         <div class="certificate">
-          <img src="images/sertificate.png" alt="sertificate">
-          <span>Сертификат</span>
+          <img onclick="myCertificatePopup()" src="images/sertificate.png" alt="sertificate">
+          <span onclick="myCertificatePopup()">Сертификат</span>
+          <div id="certificate" class="certificate-popup ">
+            <img src="images/certificate.png" alt="certificate">
+            <span id="certificateClose">X</span>
+          </div>
         </div>
         <div class="reward">
           <img src="images/gold-sertificate.png" alt="gold-sertificate">
@@ -84,7 +88,58 @@
           <li><a href="#">Загородная недвижимость</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Партнерам</a></li>
-          <li class="leave-order"><a href="#">Оставить заявку</a></li>
+          <li class="leave-order">
+            <a onclick="myPopup()" id="popup-btn" href="javascript:void(0)">Оставить заявку</a>
+            <div class="popup-wrapper" id="popup">
+              <h2>Оставить заявку</h2>
+              <p>Менеджер позвонит вам в течение 10-15 минут</p>
+              <form class="popup-form" action="">
+                <div class="popup-form__name">
+                  <label>Ваше имя</label>
+                  <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+                  <p>Так мы будем знать, как к вам обращаться</p>
+                </div>
+                <div class="popup-form__agent">
+                  <label>Выберите агента</label>
+                  <select class="fourth-select">
+                    <option data-display="Казарин Павел">Nothing</option>
+                    <option value="1">Some option</option>
+                    <option value="2">Another option</option>
+                    <option value="3" disabled>A disabled option</option>
+                    <option value="4">Potato</option>
+                  </select>
+                </div>
+                <div class="popup-form__phone">
+                  <label>Телефон</label>
+                  <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+                  <p>Обязательно для быстрой связи</p>
+                </div>
+                <div class="popup-form__mail">
+                  <label>Е-mail (электронная почта)</label>
+                  <input class="nice-select" type="text" placeholder="@">
+                  <p>Обязательно. На этот адрес придет письмо от менеджера, если не удасться с вами связаться по телефону.</p>
+                </div>
+                <div class="popup-form__mailing">
+                  <input type="checkbox" id="box-1">
+                  <label for="box-1">Подписаться на ежемесячную новостную рассылку</label>
+                </div>
+                <p class="popup-form_orders">
+                  Заявки обрабатываются в будни. с 9-21, в выходные с 10-17
+                </p>
+                <input type="submit" class="popup-form__btn" value="Отправить заявку">
+                </input>
+                <div class="popup-form__make">
+                  <input type="checkbox" id="box-2">
+                  <label for="box-2">С отделкой</label>
+                </div>
+                <div class="popup-form__make">
+                  <input type="checkbox" id="box-3">
+                  <label for="box-3">Без отделки</label>
+                </div>
+              </form>
+              <span id="closeMe">Х</span>
+            </div>
+          </li>
           <li class="icon"><a href="javasctipt:void(0);" style="font-size: 15px;" onclick="myFunction()">&#9776;</a></li>
         </ul>
       </div>
@@ -625,7 +680,7 @@
           <div class="services-article-top">
             <h2 class="services-article__title">Консультации в недвижимости</h2>
             <a class="all-consultations" href="#">Все консультации</a>
-            <a href="#" class="free-question">
+            <a onclick="myPopupQuestion()" href="javascript:void(0)" class="free-question" id="free-question-btn">
               бесплатно
               <span>задать вопрос</span>
             </a>
@@ -714,6 +769,48 @@
               </figure>
             </div>
           </div>
+          <div class="question-popup">
+            <h2>Задайте свой вопрос агенту по недвижимости</h2>
+            <form class="popup-form" action="">
+              <div class="popup-form__name">
+                <label>Ф. И. О.</label>
+                <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+                <p>Так мы будем знать, как к вам обращаться</p>
+              </div>
+              <div class="popup-form__agent">
+                <label>Выберите раздел вопроса</label>
+                <select class="fifth-select">
+                  <option data-display="Казарин Леонид">Nothing</option>
+                  <option value="1">Some option</option>
+                  <option value="2">Another option</option>
+                  <option value="3" disabled>A disabled option</option>
+                  <option value="4">Potato</option>
+                </select>
+              </div>
+              <div class="popup-form__mail">
+                <label>Е-mail (электронная почта)</label>
+                <input class="nice-select" type="text" placeholder="@">
+                <p>Обязательно. На этот адрес придет письмо от менеджера, если не удасться с вами связаться по телефону.</p>
+              </div>
+              <div class="popup-form__phone">
+                <label>Телефон</label>
+                <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+                <p>Обязательно для быстрой связи</p>
+              </div>
+              <div class="add_question">
+                <label>Задайте вопрос эксперту</label>
+                <textarea name="text"></textarea>
+              </div>
+              <p>Чем подробнее вы разъясните ситуацию, тем более полным и точным будет ответ эксперта</p>
+              <div class="popup-form__mailing">
+                <input type="checkbox" id="box-4">
+                <label for="box-4">Подписаться на ежемесячную новостную рассылку</label>
+              </div>
+              <input type="submit" class="popup-form__btn" value="Отправить вопрос">
+              </input>
+            </form>
+            <span id="question-close">Х</span>
+          </div>
         </div>
         <div class="services-sidebar">
           <h3>Последние отзывы</h3>
@@ -733,7 +830,50 @@
           </div>
           <div class="services-sidebar-bottom">
             <a href="#" class="services-all-reviws">Все отзывы</a>
-            <a href="#" class="services-add-reviws">Добавить отзыв</a>
+            <a onclick="myPopupReview()" href="javascript:void(0)" class="services-add-reviws">Добавить отзыв</a>
+          </div>
+          <div class="review-popup">
+            <h2>Задайте свой вопрос агенту по недвижимости</h2>
+            <p>Ваши контактные данные не будут опубликованы на сайте</p>
+            <form class="popup-form" action="">
+              <div class="add_question">
+                <label>Текст отзыва</label>
+                <textarea name="text"></textarea>
+              </div>
+              <div class="popup-form__name">
+                <label>Ф. И. О.</label>
+                <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+                <p>Так мы будем знать, как к вам обращаться</p>
+              </div>
+              <div class="popup-form__agent">
+                <label>Выберите раздел вопроса</label>
+                <select class="sixth-select">
+                  <option data-display="Казарин Леонид">Nothing</option>
+                  <option value="1">Some option</option>
+                  <option value="2">Another option</option>
+                  <option value="3" disabled>A disabled option</option>
+                  <option value="4">Potato</option>
+                </select>
+              </div>
+              <div class="popup-form__mail">
+                <label>Е-mail (электронная почта)</label>
+                <input class="nice-select" type="text" placeholder="@">
+                <p>Обязательно. На этот адрес придет ответ на отзыв</p>
+              </div>
+              <div class="popup-form__phone">
+                <label>Телефон</label>
+                <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+                <p>Необязательно. Но мы можем вам позвонить, чтобы ответить на отзыв</p>
+              </div>
+              <div class="popup-form__mailing">
+                <input type="checkbox" id="box-5">
+                <label for="box-5">Подписаться на ежемесячную новостную рассылку</label>
+              </div>
+              <input type="submit" class="popup-form__btn" value="Отправить вопрос">
+              </input>
+              <p class="review__desc">Отзывы обрабатываются в будни с 9 до 21, в выходные с 10 до 17.</p>
+            </form>
+            <span id="review-close">Х</span>
           </div>
         </div>
       </div>
@@ -843,7 +983,7 @@
             <div class="swiper-slide">
               <img src="images/reward9.jpg" alt="reward">
             </div>
-             <div class="swiper-slide">
+            <div class="swiper-slide">
               <img src="images/reward9.jpg" alt="reward">
             </div>
           </div>
@@ -950,6 +1090,67 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer-inner page-content">
+        <div class="footer-top">
+          <a href="#" class="logo-footer">
+            <img src="images/footer-logo.png" alt="#">
+          </a>
+          <div class="services-footer">
+            <div class="rielty-footer">
+              <h3>НЕДВИЖИМОСТЬ</h3>
+              <ul>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Квартиры</a></li>
+                <li><a href="#">Новостройки</a></li>
+                <li><a href="#">Загородная недвижимость</a></li>
+                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">Оставить заявку</a></li>
+              </ul>
+            </div>
+            <div class="agency-footer">
+              <h3>АГЕНСТВО</h3>
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Команда</a></li>
+                <li><a href="#">Бесплатные консультации</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Поиск по каталогу</a></li>
+                <li><a href="#">Команда</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Поиск по карте</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contacts-footer">
+            <div class="footer-phone">
+              <p class="footer-phone__free">По РФ бесплатно</p>
+              <p class="footer-phone_call">+7 (495) 795-00-22</p>
+              <a href="#" class="footer-phone__recall">Перезвонить вам?</a>
+            </div>
+            <div class="footer-contacts">
+              <p class="footer-contacts__time">Пн–Пт 09:00–21:00, Сб 10:00–16:00</p>
+              <p class="footer-contacts__adress">г. Москва, м.Баррикадная, ул.Садовая-Кудринская, 2/62</p>
+              <a href="#" class="footer-contacts__map">Схема проезда</a>
+            </div>
+            <div class="social">
+              <a class="vk" href="#"></a>
+              <a class="facebook" href="#"></a>
+              <a class="instagram" href="#"></a>
+              <a class="star" href="#"></a>
+              <a href="#">Избранное</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer__copy">&#9400; 2010-2017, Агентство недвижимости «БЕСТ-Недвижимость на Баррикадной» </p>
+          <a href="#" class="footer__site-map">Карта сайта</a>
+          <a href="#" class="footer__develop">Разработка сайта: <span>Swaxis</span></a>
+        </div>
+        <div class="go-top"> <span class="go-to-top"></span></div>
+      </div>
+    </footer>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -960,7 +1161,7 @@
   <script src="js/jquery.nice-select.min.js"></script>
   <script>
   $(document).ready(function() {
-    $('.first-select, .second-select, .third-select').niceSelect();
+    $('.first-select, .second-select, .third-select, .fourth-select, .fifth-select, .sixth-select').niceSelect();
   });
   </script>
 </body>
