@@ -23,6 +23,29 @@ var mySecondSwiper = new Swiper('.swiper-container2', {
   // If we need pagination
   pagination: '.swiper-pagination',
   slidesPerView: 4,
+  breakpoints: {
+     // when window width is <= 320px
+     320: {
+       slidesPerView: 1,
+      
+     },
+     // when window width is <= 480px
+     480: {
+       slidesPerView: 1,
+       spaceBetween: 0
+     },
+     // when window width is <= 640px
+     640: {
+       slidesPerView: 2,
+       spaceBetween: 30
+     },
+    896: {
+       slidesPerView: 2,
+     },
+     1170: {
+       slidesPerView: 3,
+     }
+   },
 });
 
 var myThirdSwiper = new Swiper('.swiper-container3', {
@@ -36,6 +59,37 @@ var myThirdSwiper = new Swiper('.swiper-container3', {
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev',
 	slidesPerView: 9,
+	breakpoints: {
+	   // when window width is <= 320px
+	   320: {
+	     slidesPerView: 3,
+	    
+	   },
+	   // when window width is <= 480px
+	   480: {
+	     slidesPerView: 3,
+	     spaceBetween: 0
+	   },
+	   // when window width is <= 640px
+	   640: {
+	     slidesPerView: 4,
+	     spaceBetween: 0,
+	     // spaceBetween: 30
+	   },
+	   768: {
+	      slidesPerView: 4,
+	      spaceBetween: 0,
+	    },
+	  992: {
+	     slidesPerView: 5,
+	     spaceBetween: 0,
+	   },
+
+	   1170: {
+	     slidesPerView: 6,
+	     spaceBetween: 0,
+	   }
+	 },
 })
 
 
@@ -49,6 +103,37 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev',
 	slidesPerView: 5,
+	breakpoints: {
+	   // when window width is <= 320px
+	   320: {
+	     slidesPerView: 1,
+	    
+	   },
+	   // when window width is <= 480px
+	   480: {
+	     slidesPerView: 1,
+	     spaceBetween: 0
+	   },
+	   // when window width is <= 640px
+	   640: {
+	     slidesPerView: 2,
+	     spaceBetween: 0,
+	     // spaceBetween: 30
+	   },
+	   768: {
+	      slidesPerView: 3,
+	      spaceBetween: 0,
+	    },
+	  992: {
+	     slidesPerView: 3,
+	     spaceBetween: 0,
+	   },
+
+	   1170: {
+	     slidesPerView: 4,
+	     spaceBetween: 0,
+	   }
+	 },
 });
 
 
@@ -73,11 +158,13 @@ var closeSpan    = document.getElementById("closeMe");
 
 	function myPopup(){
 		popup.classList.add("fadeInDown");
+		$('.leave-order').css("z-index", "20");
   }
 
 	function close() {
 		popup.classList.add("fadeInDownReverce");
 		popup.classList.remove("fadeInDown"); 
+		 $('.leave-order').css("z-index", "5");
 		setTimeout(function() {
 		popup.classList.remove("fadeInDownReverce");
 		}, 1000);
@@ -156,3 +243,35 @@ $(".go-top").click(function() {
 		scrollTop: $(".header").offset().top
 	}, 2000);
 });
+
+  /* -------------------------  */
+ /* ---------Dropnav-menu----  */ 
+/* -------------------------  */
+
+
+if (window.matchMedia('(min-width: 992px)').matches) {
+	$( ".parent-dropdown" ).hover(
+	  function() {
+
+	    $('.topnav .services-list').addClass( "fadeInDownMenu" );
+	    
+
+	  }, function() {
+
+	  	$('.topnav .services-list').addClass( "fadeInDownReverceMenu" );
+	  	$('.topnav .services-list').removeClass( "fadeInDownMenu" );
+	  
+
+		  	setTimeout(function() {
+
+		  		$('.topnav .services-list').removeClass( "fadeInDownReverceMenu" );
+		  	
+		  	}, 400);
+	  
+	  }
+	);
+}
+
+ 
+
+    

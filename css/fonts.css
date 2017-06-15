@@ -18,3 +18,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'OpenSans-LightItalic';
+  src: url('../fonts/OpenSans-LightItalic/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-LightItalic/OpenSans-LightItalic.woff') format('woff'),
+       url('../fonts/OpenSans-LightItalic/OpenSans-LightItalic.ttf')  format('truetype'),
+       url('../fonts/OpenSans-LightItalic/OpenSans-LightItalic.svg#OpenSans-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

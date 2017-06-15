@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -82,13 +83,83 @@
     <div class="header-menu-w">
       <div class="header-menu page-content">
         <ul class="topnav" id="myTopnav">
-          <li><a href="#">Услуги<i>&#9776;</i></a></li>
-          <li><a href="#">Квартиры</a></li>
-          <li><a href="#">Новостройки</a></li>
-          <li><a href="#">Загородная недвижимость</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Партнерам</a></li>
-          <li class="leave-order">
+          <li class="topnav__item parent-dropdown">
+            <a href="#">Услуги&nbsp;<i>&#9776;</i></a>
+            <div class="services-list">
+                   
+                    <div class="services-list-col">
+                      <div class="services-title-w">
+                        <h3>Новостройки</h3>
+                      </div>
+                      <div class="services-sub">
+                        <h4>Услуги по покупке </h4>
+                        <ul>
+                          <li><a href="#">Купить квартиру в новостройке</a></li>
+                          <li><a href="#">TRADE-IN на новостройку</a></li>
+                          <li><a href="#">Юридическая экспертиза документов</a></li>
+                          <li><a href="#">Сопровождение при подписании договора</a></li>
+                          <li><a href="#">Военная ипотека</a></li>
+                          <li><a href="#">Покупка квартиры в ипотеку</a></li>
+                        </ul>
+                      </div>
+                      <div class="services-sub">
+                        <h4>Услуги по продаже</h4>
+                        <ul>
+                          <li><a href="#">Продать квартиру в новостройке</a></li>
+                          <li><a href="#">Сопровождение продажи новостройки</a></li>
+                          <li><a href="#">Консультация</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="services-list-col">
+                      <div class="services-title-w">
+                        <h3> Вторичный рынок</h3>
+                      </div>
+                      <div class="services-sub">
+                        <h4>Услуги по покупке </h4>
+                        <ul>
+                          <li><a href="#">Купить квартиру</a></li>
+                          <li><a href="#">Юридическая экспертиза документов</a></li>
+                          <li><a href="#">Сопровождение сделки</a></li>
+                          <li><a href="#">Военная ипотека</a></li>
+                          <li><a href="#">Покупка квартиры в ипотеку</a></li>
+                        </ul>
+                      </div>
+                      <div class="services-sub">
+                        <h4>Услуги по продаже</h4>
+                        <ul>
+                          <li><a href="#">Продать квартиру</a></li>
+                          <li><a href="#">Продать долю в квартире</a></li>
+                          <li><a href="#">Срочный выкуп квартиры, комнаты, доли</a></li>
+                          <li><a href="#">Выкуп недвижимости из-под залога</a></li>
+                          <li><a href="#">Подготовка пакета документов для продажи</a></li>
+                          <li><a href="#">Сопровождение сделки</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="services-list-col">
+                      <div class="services-title-w">
+                        <h3>Сопровождение и организация сделок</h3>
+                      </div>
+                      <div class="services-sub">
+                        <ul>
+                          <li><a href="#">Сопровождение сделки</a></li>
+                          <li><a href="#">Составление договора</a></li>
+                          <li><a href="#">Сопровождение договора аванса</a></li>
+                          <li><a href="#">Сопровождение основного договора</a></li>
+                          <li><a href="#">Организация проведения сделки</a></li>
+                          <li><a href="#">Сопровождение на просмотр и выбор квартиры</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+          </li>
+          <li class="topnav__item"><a href="#">Квартиры</a></li>
+          <li class="topnav__item"><a href="#">Новостройки</a></li>
+          <li class="topnav__item"><a href="#">Загородная недвижимость</a></li>
+          <li class="topnav__item"><a href="#">Спецпредложения</a></li>
+          <li class="topnav__item"><a href="#">Партнерам</a></li>
+          <li class="topnav__item leave-order">
             <a onclick="myPopup()" id="popup-btn" href="javascript:void(0)">Оставить заявку</a>
             <div class="popup-wrapper" id="popup">
               <h2>Оставить заявку</h2>
