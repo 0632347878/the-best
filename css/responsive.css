@@ -401,10 +401,11 @@
   .header-left .phone {
     width: 100%;
     margin-right: 0;
+    margin-top: 10px;
   }
   .header-left .contacts {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .leave-order {
     min-width: 167px;
