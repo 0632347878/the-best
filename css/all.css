@@ -1071,7 +1071,7 @@ section.services .services-list__title {
 .services-article-w {
   flex: 1 1 73%;
   margin-right: 3%;
-  padding-right: 15px;
+  padding-left: 15px;
 }
 .services-article-w .services-article-top {
   display: flex;
