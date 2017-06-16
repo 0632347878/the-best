@@ -19,7 +19,7 @@ var mySecondSwiper = new Swiper('.swiper-container2', {
   direction: 'horizontal',
   loop: true,
 
-  // autoplay: 2000,
+  autoplay: 2000,
   // If we need pagination
   pagination: '.swiper-pagination',
   slidesPerView: 4,
@@ -30,7 +30,7 @@ var mySecondSwiper = new Swiper('.swiper-container2', {
       
      },
      // when window width is <= 480px
-     480: {
+     606: {
        slidesPerView: 1,
        spaceBetween: 0
      },
@@ -62,7 +62,7 @@ var myThirdSwiper = new Swiper('.swiper-container3', {
 	breakpoints: {
 	   // when window width is <= 320px
 	   320: {
-	     slidesPerView: 3,
+	     slidesPerView: 2,
 	    
 	   },
 	   // when window width is <= 480px
@@ -136,6 +136,9 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 	 },
 });
 
+  /* -------------------------  */
+ /* ---------GAMBURGER---------*/ 
+/* -------------------------  */ 
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -237,11 +240,17 @@ closeSpanReview.addEventListener('click', closeReview);
   /* -------------------------  */
  /* ---------GO-TO-----------  */ 
 /* -------------------------  */
-
+//top
 $(".go-top").click(function() {
 	$('html, body').animate({
 		scrollTop: $(".header").offset().top
 	}, 2000);
+});
+//services
+$(".parent-dropdown a").click(function() {
+	$('html, body').animate({
+		scrollTop: $("#go-services").offset().top
+	}, 1000);
 });
 
   /* -------------------------  */
