@@ -12,8 +12,8 @@ gulp.task('browser-sync', function() {
     });
 });
 
-// $ browser-sync start --server --files "*.*"  // trash
-browser-sync start --server --files "*.html, css/*.css" // work
+// $ browser-sync start --server --files "*.*"  // root
+// browser-sync start --server --files "*.html, css/*.css" // work
 
 // or...
 

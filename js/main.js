@@ -150,6 +150,41 @@ function myFunction() {
   }
 }
 
+
+if('.more-panel'.hasClass('more')) {
+  $('.search-more').addClass('visible');
+}
+
+
+  /* -------------------------  */
+ /* ---------Dropnav-menu----  */ 
+/* -------------------------  */
+
+
+if (window.matchMedia('(min-width: 992px)').matches) {
+	$( ".parent-dropdown" ).hover(
+	  function() {
+
+	    $('.topnav .services-list').addClass( "fadeInDownMenu" );
+	    
+
+	  }, function() {
+
+	  	$('.topnav .services-list').addClass( "fadeInDownReverceMenu" );
+	  	$('.topnav .services-list').removeClass( "fadeInDownMenu" );
+	  
+
+		  	setTimeout(function() {
+
+		  		$('.topnav .services-list').removeClass( "fadeInDownReverceMenu" );
+		  	
+		  	}, 400);
+	  
+	  }
+	);
+}
+
+
   /* -------------------------  */
  /* ---------POPUPS----------  */ 
 /* -------------------------  */ 
@@ -197,7 +232,9 @@ var closeSpanSertificate = document.getElementById("certificateClose");
 closeSpanSertificate.addEventListener('click', closeCertificate);
 
 /* question */
-
+var indexPageInitialization = document.getElementsByTagName('title');
+// if(indexPageInitialization.innerHTML = "index") {
+	console.log('true')
 var popupBtnQuestion = document.getElementById("free-question-btn");
 var popupQuestion    = document.querySelector(".question-popup");
 var closeSpanQuestion    = document.getElementById("question-close");
@@ -240,6 +277,7 @@ closeSpanReview.addEventListener('click', closeReview);
   /* -------------------------  */
  /* ---------GO-TO-----------  */ 
 /* -------------------------  */
+
 //top
 $(".go-top").click(function() {
 	$('html, body').animate({
@@ -253,34 +291,3 @@ $(".parent-dropdown a").click(function() {
 	}, 1000);
 });
 
-  /* -------------------------  */
- /* ---------Dropnav-menu----  */ 
-/* -------------------------  */
-
-
-if (window.matchMedia('(min-width: 992px)').matches) {
-	$( ".parent-dropdown" ).hover(
-	  function() {
-
-	    $('.topnav .services-list').addClass( "fadeInDownMenu" );
-	    
-
-	  }, function() {
-
-	  	$('.topnav .services-list').addClass( "fadeInDownReverceMenu" );
-	  	$('.topnav .services-list').removeClass( "fadeInDownMenu" );
-	  
-
-		  	setTimeout(function() {
-
-		  		$('.topnav .services-list').removeClass( "fadeInDownReverceMenu" );
-		  	
-		  	}, 400);
-	  
-	  }
-	);
-}
-
- 
-
-    

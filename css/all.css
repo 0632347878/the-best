@@ -56,6 +56,21 @@ body {
 .nav-top .menu-top {
   display: flex;
 }
+.nav-top .menu-top li:first-child:hover > .menu-top__drop {
+  display: block;
+}
+.nav-top .menu-top .menu-top__drop {
+  display: none;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 22;
+  background: #dff2f8;
+  max-width: 176px;
+  width: 100%;
+  border-right: 1px solid #77cfea;
+  border-bottom: 1px solid #77cfea;
+  border-left: 1px solid #77cfea;
+}
 .nav-top a {
   color: #0088cf;
   margin: 0 15px;
@@ -2005,5 +2020,155 @@ section.services .services-list__title {
   font-size: 2em;
 }
 .hidden {
+  display: none !important;
+}
+/* page Search */
+.section-search {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px auto 35px;
+}
+.main-search {
+  margin-right: 2.1%;
+  flex: 1 1 74%;
+}
+.description-search {
+  flex: 1 1 23.9%;
+  padding: 10px 15px 15px 20px;
+  background-color: #f1f1f2;
+}
+.description-search .role-panel {
+  font-size: 12px;
+  color: #000;
+  display: block;
+  text-align: right;
+  margin-bottom: 12px;
+}
+.description-search .more-panel,
+.description-search .search-more {
+  color: #0088cf;
+  margin-top: 15px;
+  display: inline-block;
+  width: 100%;
+}
+.choose-realty {
+  max-width: 210px;
+}
+.choose-realty div {
+  display: inline-block;
+  margin: 4px 0;
+}
+.choose-realty .choose__flat {
+  margin-right: 20px;
+}
+.choose-realty input[type="checkbox"] {
   display: none;
+}
+.choose-realty label {
+  color: #0088cf;
+  border-bottom: 1px dashed;
+  cursor: pointer;
+  transition: .1s;
+}
+.choose-realty input[type="checkbox"]:checked + label {
+  font-weight: bold;
+  color: #333;
+  border-bottom: none;
+}
+.choose-realty input[id="box-8"] + label {
+  white-space: nowrap;
+}
+.choose__cost,
+.choose__area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.choose__cost label,
+.choose__area label {
+  display: block;
+  width: 100%;
+  color: #999;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.choose__cost input,
+.choose__area input {
+  max-width: 105px;
+  min-height: 40px;
+}
+.choose__rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.choose__rooms label[for=""] {
+  display: block;
+  width: 100%;
+  color: #999;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.choose__rooms input[type="checkbox"] {
+  display: none;
+}
+.choose__rooms label[for^="box"] {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background: #0088cf;
+  font: bold 16px/50px 'Open Sans';
+}
+.choose__rooms input[type="checkbox"]:checked + label {
+  background: #77cfea;
+}
+.choose__area label {
+  margin-top: 0;
+}
+.visible {
+  display: block !important;
+}
+.description-search .search-more {
+  display: none;
+}
+.choose__parametr {
+  margin-top: 25px;
+  margin-bottom: -12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.choose__parametr-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 147px;
+  width: 100%;
+  min-height: 40px;
+  background-color: #0088cf;
+  color: #fff;
+  padding: 0 5px;
+  margin-bottom: 12px;
+}
+.choose__parametr-item span {
+  margin-left: auto;
+  cursor: pointer;
+}
+.choose__parametr-clear {
+  display: inline-block;
+  max-width: 88px;
+  width: 100%;
+  min-height: 40px;
+  background-color: #fff;
+  border: 1px #ccc solid;
+  line-height: 40px;
+  text-align: center;
+  color: #999;
+  margin-bottom: 12px;
 }

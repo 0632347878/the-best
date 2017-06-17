@@ -101,6 +101,24 @@ a {
 :-moz-placeholder           {color:#999;}/* Firefox 18- */
 :-ms-input-placeholder      {color:#999;}
 
+.centered-placehplder() {
+	::-webkit-input-placeholder {
+	   text-align: center;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   text-align: center;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   text-align: center;  
+	}
+
+	:-ms-input-placeholder {  
+	   text-align: center; 
+	}
+}
+
 body {
 	min-width: 320px;
 	font: @base-fs/1.4 'Open Sans', sans-serif;
@@ -117,6 +135,24 @@ body {
 	display: flex;
 	& .menu-top { 
 		display: flex;
+		li:first-child {
+			&:hover > .menu-top__drop {
+				display: block;
+				
+			}
+		}
+		.menu-top__drop {
+			display: none;
+			padding: 10px 0;
+			position: absolute;
+			z-index: 22;
+			background: #dff2f8;
+			max-width: 176px;
+			width: 100%;
+			border-right: 1px solid #77cfea;
+			border-bottom: 1px solid #77cfea;
+			border-left: 1px solid #77cfea;
+		}
 	}
 	& a {
 		color: @link-color;
@@ -512,7 +548,7 @@ body {
 .section-slider {	
 	margin-top: 15px;
 	.clearfix();
-	.main-slider {
+	.main-slider{
 		width: 74%;
 		float: left;
 		margin-right: 25px;
@@ -1873,7 +1909,6 @@ section.services {
 			}
 			input[type="checkbox"]:checked + label:before {
 				content: url(../images/checkbox-enable.png);
-
 			}
 		
 	}
@@ -2097,12 +2132,174 @@ section.services {
 }
 
 .hidden {
-	display: none;	
+	display: none !important;	
+}
+
+/* page Search */
+.section-search {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15px auto 35px;
+}
+.main-search {	
+	margin-right: 2.1%;
+	flex: 1 1 74%
+}
+.description-search {
+	flex: 1 1 23.9%;
+	padding: 10px 15px 15px 20px;
+	background-color: #f1f1f2;
+	.role-panel {
+		font-size: 12px;
+		color: #000;
+		display: block;
+		text-align: right;	
+		margin-bottom: 12px;
+	}
+	.more-panel, .search-more {
+		color: @link-color;
+		margin-top: 15px;
+		display: inline-block;
+		width: 100%;
+		
+	}
+}
+
+.choose-realty {
+	max-width: 210px;
+	div {
+		display: inline-block;
+		margin: 4px 0;
+	}
+	.choose__flat {
+		margin-right: 20px;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	label {
+		color: @link-color;
+		border-bottom: 1px dashed;
+		cursor: pointer;
+		transition: .1s;
+	}
+	input[type="checkbox"]:checked + label {
+		font-weight: bold;
+		color: #333;
+		border-bottom: none;	
+	}
+	input[id="box-8"] + label {
+		white-space: nowrap;
+	}
+}
+.choose__cost, .choose__area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	label {
+		display: block;
+		width: 100%;
+		
+		color: #999;
+		margin-top: 12px;
+		margin-bottom: 8px;
+	}
+	input {
+		max-width: 105px;
+		min-height: 40px;
+	}
+}
+.choose__rooms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	label[for=""] {		
+	display: block;
+	width: 100%;
+	color: #999;
+	margin-top: 12px;
+	margin-bottom: 8px;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	label[for^="box"] {
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		text-align: center;
+		color: #fff;
+		background: @link-color;
+		font: bold 16px/50px 'Open Sans';
+	}
+	input[type="checkbox"]:checked + label {
+		background: #77cfea;
+	}
+}
+.choose__area {	
+	label {
+		margin-top: 0;
+	}
+}
+// .description-search {	
+// 	.more-panel.more + .search-more {
+// 		display: block;
+// 	}
+// }
+.visible {
+	display: block !important;
+}
+.description-search {
+	.search-more {
+		display: none;
+	}
+}
+.choose__parametr {
+	margin-top: 25px;
+	margin-bottom: -12px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	display: none;
+	
+}
+.choose__parametr-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 147px;
+	width: 100%;
+	min-height: 40px;
+	background-color: @link-color;
+	color: #fff;
+	padding: 0 5px;
+	margin-bottom: 12px;
+	span {
+		margin-left: auto;
+		cursor: pointer;
+	}
+}
+.choose__parametr-clear {
+	display: inline-block;
+	max-width: 88px;
+	width: 100%;
+	min-height: 40px;
+	background-color: #fff;
+	border: 1px #ccc solid;
+	line-height: 40px;
+	text-align: center;
+	color: #999;
+	margin-bottom: 12px;
+}
+
+.more-panel.more  {
+
 }
 
 
-
-// fa fa-times close
 
 
 
