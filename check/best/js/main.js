@@ -19,7 +19,7 @@ var mySecondSwiper = new Swiper('.swiper-container2', {
   direction: 'horizontal',
   loop: true,
 
-  autoplay: 2000,
+  autoplay: 4000,
   // If we need pagination
   pagination: '.swiper-pagination',
   slidesPerView: 4,
@@ -169,25 +169,18 @@ if (window.matchMedia('(min-width: 992px)').matches) {
 
 	  	$('.topnav .services-list').addClass( "fadeInDownReverceMenu" );
 	  	$('.topnav .services-list').removeClass( "fadeInDownMenu" );
+	  
+
 		  	setTimeout(function() {
+
 		  		$('.topnav .services-list').removeClass( "fadeInDownReverceMenu" );
+		  	
 		  	}, 400);
 	  
 	  }
 	);
-
-
 }
-   // check if exist burger
-if (window.matchMedia('(max-width: 992px)').matches) {
-	var services = document.getElementById('go-services');
-	var hideeLi  = document.querySelector('.parent-dropdown');
-	var myNav    = document.getElementById('myTopnav');
-	if(services == null) {
-		console.log('Yes you are');
-		hideeLi.classList.add('hidden');
-	}
-}
+
 
   /* -------------------------  */
  /* ---------POPUPS----------  */ 
@@ -238,20 +231,15 @@ closeSpanSertificate.addEventListener('click', closeCertificate);
 /* question */
 
 var indexPageInitialization = document.getElementsByTagName('title');
-// if(indexPageInitialization.innerHTML = "index") {
-	console.log('true')
 var popupBtnQuestion = document.getElementById("free-question-btn");
 var popupQuestion    = document.querySelector(".question-popup");
 var closeSpanQuestion    = document.getElementById("question-close");
-
+	if(!(closeSpanQuestion == null)) {
 	function myPopupQuestion(){
-		if(!(closeSpanQuestion == null)) {
 		popupQuestion.classList.add("fadeInDown");
-		}
   }
 
 	function closeQuestion() {
-		if(!(closeSpanQuestion == null)) {
 		popupQuestion.classList.add("fadeInDownReverce");
 		popupQuestion.classList.remove("fadeInDown"); 
 		setTimeout(function() {
@@ -263,15 +251,12 @@ closeSpanQuestion.addEventListener('click', closeQuestion);
 }
 /*review*/
 
-// var popupBtn = document.getElementById("popup-btn");
 
 var popupReview    = document.querySelector(".review-popup");
 var closeSpanReview    = document.getElementById("review-close");
-
+	if(!(closeSpanReview == null)) {
 	function myPopupReview(){
-		if(!(closeSpanReview == null)) {
 		popupReview.classList.add("fadeInDown");
-		
   }
 
 	function closeReview() {
@@ -293,7 +278,7 @@ closeSpanReview.addEventListener('click', closeReview);
 $(".go-top").click(function() {
 	$('html, body').animate({
 		scrollTop: $(".header").offset().top
-	}, 2000);
+	}, 1000);
 });
 //services
 $(".parent-dropdown a").click(function() {
@@ -302,9 +287,9 @@ $(".parent-dropdown a").click(function() {
 	}, 1000);
 });
 
-
-if(!( myClick == null )) {
+if(!(myClick == null)) {
 var myClick = document.querySelector('.more-panel');
+
 function visibleMore() {
 	if($('.more-panel').hasClass('more')) {
 	  $('#test1').addClass('visible');
@@ -312,7 +297,6 @@ function visibleMore() {
 }
 myClick.addEventListener('click', visibleMore);
 }
-
 
 
 

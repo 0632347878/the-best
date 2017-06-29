@@ -871,7 +871,7 @@ figure .propositions-hover {
   width: 100%;
 }
 .stars {
-  width: 100px;
+  width: 105px;
   position: absolute;
   right: 5px;
   top: 50%;
@@ -1093,6 +1093,31 @@ section.services .services-list__title {
   justify-content: space-between;
   align-items: flex-end;
 }
+.services-article-w .services-article-top .free-question {
+  min-height: 50px;
+  max-width: 260px;
+  width: 100%;
+  background-color: #fdbc3b;
+  transition: .4s;
+  border-radius: 5px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px #7e5e1d;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 15px;
+}
+.services-article-w .services-article-top .free-question span {
+  font-size: 16px;
+  text-shadow: none;
+  text-transform: none;
+  line-height: 1;
+  text-align: right;
+  padding-right: 20px;
+}
 .services-article-w .all-consultations {
   color: #238ed0;
   font-size: 12px;
@@ -1277,6 +1302,34 @@ section.services .services-list__title {
   flex: 1 1 23.7%;
   padding-right: 15px;
 }
+.portal-article .portal-sidebar .portal-sidebar-top {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  min-height: 47px;
+  padding-right: 50px;
+  padding-left: 40px;
+  width: 100%;
+  background: #74b64d url(../images/organizer-icon.png) no-repeat right 2px center;
+}
+.portal-article .portal-sidebar .portal-sidebar-top h3 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+}
+.portal-article .portal-sidebar .portal-sidebar-item img {
+  border: 1px solid #74b64d;
+}
+.portal-article .portal-sidebar .portal-sidebar-item * {
+  margin-bottom: 7px;
+  text-align: center;
+}
+.portal-article .portal-sidebar .portal-sidebar-item * .sidebar-item__phone {
+  color: inherit;
+}
+.portal-article .portal-sidebar .portal-sidebar-item:not(:first-child) {
+  margin-top: 30px;
+}
 .portal-article .portal-sidebar .sidebar-item__name {
   color: #74b64d;
   font-weight: 600;
@@ -1290,34 +1343,6 @@ section.services .services-list__title {
 }
 .portal-article .portal-article-bottom p {
   color: #363636;
-}
-.portal-sidebar-top {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  min-height: 47px;
-  padding-right: 50px;
-  padding-left: 40px;
-  width: 100%;
-  background: #74b64d url(../images/organizer-icon.png) no-repeat right 2px center;
-}
-.portal-sidebar-top h3 {
-  font-weight: bold;
-  color: #fff;
-  font-size: 18px;
-}
-.portal-sidebar-item img {
-  border: 1px solid #74b64d;
-}
-.portal-sidebar-item * {
-  margin-bottom: 7px;
-  text-align: center;
-}
-.portal-sidebar-item * .sidebar-item__phone {
-  color: inherit;
-}
-.portal-sidebar-item:not(:first-child) {
-  margin-top: 30px;
 }
 /*section Rewards*/
 /* Reuse*/
@@ -1362,31 +1387,6 @@ section.services .services-list__title {
 }
 .rewards .rewards-slider {
   margin: 35px auto 65px;
-}
-.free-question {
-  min-height: 50px;
-  max-width: 260px;
-  width: 100%;
-  background-color: #fdbc3b;
-  transition: .4s;
-  border-radius: 5px;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-shadow: 0 2px 2px #7e5e1d;
-  color: #fff;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 15px;
-}
-.free-question span {
-  font-size: 16px;
-  text-shadow: none;
-  text-transform: none;
-  line-height: 1;
-  text-align: right;
-  padding-right: 20px;
 }
 .bottom-articles {
   display: flex;
@@ -2174,233 +2174,4 @@ section.services .services-list__title {
 }
 .more-panel.more + .choose__parametr {
   display: block;
-}
-/*consult-page*/
-.consult-article__title {
-  font-size: 30px;
-}
-.consult-search {
-  padding: 7px 10px 5px 0;
-  background-color: #e5f3fa;
-}
-.ninth-select {
-  color: #0088cf;
-  border: none;
-  background-color: transparent;
-}
-.ninth-select:after {
-  border-color: #0088cf;
-}
-form.articles {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-}
-form.articles input[type="text"] {
-  padding: 8px 12px 10px;
-  border: 1px #ccc solid;
-  outline: none;
-  align-self: center;
-  flex: 1 1 65%;
-  max-width: 515px;
-  font-size: 14px;
-}
-form.articles input[type="text"]::-webkit-input-placeholder {
-  color: #333;
-}
-form.articles input[type="submit"] {
-  font-size: 18px;
-  color: #fff;
-  background-color: #0088cf;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  max-width: 165px;
-  width: 100%;
-  cursor: pointer;
-  padding: 8px 0 6px;
-  align-self: center;
-  transition: .4s;
-  flex: 1 1 19%;
-  margin-left: 10px;
-}
-form.articles input[type="submit"]:hover {
-  transition: .4s;
-  background-color: #36baff;
-}
-.services-sidebar__question {
-  background: #0e2470 url(../images/question-bg.png);
-  padding: 0 0 10px;
-  margin-top: 15px;
-}
-.services-sidebar .sidebar__question-title {
-  padding: 35px 0 55px;
-  text-align: center;
-  font-size: 20px;
-  color: #fdbc3b;
-}
-.services-sidebar .sidebar__question-title:after {
-  display: none;
-}
-.services-sidebar .sidebar__question-text {
-  font-size: 16px;
-  color: #fff;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 35px;
-  padding: 0 10px;
-}
-.services-sidebar .free-question {
-  max-width: 265px;
-}
-.services-sidebar .portal-sidebar-top + .portal-sidebar-item {
-  margin-top: 15px;
-}
-.services-sidebar__question + .portal-sidebar-top h3:after {
-  display: none;
-}
-.services-sidebar__question + .portal-sidebar-top {
-  margin-top: 40px;
-}
-.services-sidebar__question + .portal-sidebar-top h3 {
-  margin-bottom: 0;
-  align-items: center;
-}
-.portal-sidebar-item + .bottom-articles-col {
-  margin-top: 50px;
-}
-.portal-sidebar-item + .bottom-articles-col p:not([class]) {
-  font-size: 13px;
-  color: #666;
-}
-.portal-sidebar-item + .bottom-articles-col h3 {
-  margin-bottom: 0;
-}
-.portal-sidebar-item + .bottom-articles-col h3:after {
-  display: none;
-}
-.sidebar__question-important {
-  font-weight: 500;
-  font-size: 13px;
-  color: #333;
-}
-.portal-sidebar-item + .bottom-articles-col .col__title-link {
-  margin-bottom: 5px;
-  margin-top: 7px;
-}
-.portal-sidebar-item + .bottom-articles-col .col__title-link:hover {
-  color: #f63;
-}
-.load-questions {
-  background: #d6d1d1;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.load-questions span {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.load-questions span:after {
-  content: url(../images/load-icon.png);
-  margin-left: 20px;
-  display: inline-block;
-  position: relative;
-  top: 5px;
-}
-#pagination {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  background-color: #0088cf;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 35px;
-  background-color: #fff;
-}
-#pagination a {
-  width: 25px;
-  height: 25px;
-  border: 1px solid #449cd3;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #0088cf;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#pagination a:active {
-  background-color: #0088cf;
-  color: #fff;
-}
-.special-action {
-  font-size: 16px;
-  color: #0088cf;
-  font-weight: 500;
-  display: block;
-  text-align: center;
-  line-height: 1.3;
-}
-.hot-proposition + .fresh-realty {
-  border-top: 4px solid #d1d1d1;
-}
-.hot-proposition + .fresh-realty h2 {
-  color: #036;
-  width: 65%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-/*favorite page*/
-.main_favorite h1 {
-  color: #0e2470;
-  font-size: 30px;
-  font-weight: bold;
-}
-.main_favorite .services {
-  margin-top: 0;
-}
-.main_favorite .favorite-important {
-  padding: 18px 145px 20px 55px;
-  background-color: #fcdfd8;
-  border-radius: 5px;
-  margin-top: 25px;
-}
-.main_favorite .favorite-important__title {
-  color: #ee5f3a;
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.main_favorite .favorite-important__text {
-  font-size: 14px;
-  color: #000;
-}
-.main_favorite .favorite-important__action {
-  font-size: 12px;
-  color: #0088cf;
-  border-bottom: 1px dashed #0088cf;
-}
-.breadcrumb {
-  display: flex;
-  margin: 15px auto 7px;
-}
-.breadcrumb .active-page a {
-  color: #0e2470;
-}
-.breadcrumb li {
-  position: relative;
-}
-.breadcrumb li:not(:last-child):after {
-  content: "|";
-  color: #a2dcf0;
-}
-.breadcrumb a {
-  color: #0088cf;
-  padding: 0 13px;
 }

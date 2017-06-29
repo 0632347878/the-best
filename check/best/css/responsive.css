@@ -261,9 +261,6 @@
   }
 }
 @media all and (max-width: 768px) {
-  #pagination {
-    width: 60%;
-  }
   .header-menu-w .topnav .leave-order {
     flex-basis: 40%;
   }
@@ -328,17 +325,8 @@
   .services-list {
     align-items: stretch;
   }
-  .services-sidebar .sidebar__question-title {
-    justify-content: center;
-  }
-  .services-sidebar .free-question {
-    margin: 0 auto;
-  }
 }
 @media all and (max-width: 640px) {
-  .hot-proposition + .fresh-realty h2 {
-    width: 90%;
-  }
   .bottom-articles {
     justify-content: center;
   }
@@ -351,18 +339,6 @@
   }
   .bottom-articles .bottom-articles-col:not(:last-child) {
     margin-bottom: 25px;
-  }
-  form.articles {
-    flex-flow: wrap column;
-  }
-  form.articles .ninth-select {
-    max-width: 150px;
-    align-self: center;
-    margin-bottom: 15px;
-  }
-  form.articles input[type="text"],
-  form.articles input[type="submit"] {
-    margin-bottom: 15px;
   }
   .nav-top .menu-top {
     display: none;
@@ -419,9 +395,6 @@
   }
   .services-article-w .services-article-item .services-article-right figure img {
     margin-right: 3%;
-  }
-  #pagination {
-    width: 80%;
   }
 }
 @media all and (max-width: 479px) {
