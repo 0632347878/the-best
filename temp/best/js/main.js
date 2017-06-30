@@ -315,7 +315,7 @@ myClick.addEventListener('click', visibleMore);
 
 
 $('.refresh').click(function(){
-	$(this).addClass('hidden');
+	(this).addClass('hidden');
 });
 
 

@@ -343,14 +343,6 @@
     justify-content: center;
   }
 }
-@media all and (min-width: 640px) {
-  .consultants-item:nth-child(n+1) {
-    margin-left: 0;
-  }
-  .consultants-item:nth-child(n+3) {
-    margin-right: 0;
-  }
-}
 @media all and (max-width: 640px) {
   .hot-proposition + .fresh-realty h2 {
     width: 90%;
@@ -422,10 +414,6 @@
     font-size: 18px;
     font-weight: 500;
   }
-  .main_comand .consultants-all .consultants-item {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 @media all and (max-width: 480px) {
   .header-w {
@@ -445,10 +433,6 @@
   }
 }
 @media all and (max-width: 479px) {
-  .main_favorite .services-article-w,
-  .main_favorite .propositions-col {
-    padding-left: 5px;
-  }
   .header-left .phone {
     width: 100%;
     margin-right: 0;
