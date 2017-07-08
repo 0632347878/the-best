@@ -254,6 +254,31 @@
   .services-article-item .col__title-link {
     font-size: 16px;
   }
+  .main_card .card-item-title {
+    flex-direction: column;
+  }
+  .main_card .card-item-title h2 {
+    margin-bottom: 15px;
+  }
+  .main_card .card-item .card-form {
+    background: none;
+    padding: 20px 20px 70px 35px;
+  }
+  .main_card .card-item .card-form .popup-form__name,
+  .main_card .card-item .card-form .popup-form__agent,
+  .main_card .card-item .card-form .popup-form__phone,
+  .main_card .card-item .card-form .popup-form__mail {
+    width: 100%;
+    max-width: 80%;
+  }
+  .main_card .card-item .card-form .popup-form_orders {
+    width: 100%;
+    padding-left: 5%;
+    margin-bottom: 10px;
+  }
+  .main_service .main_center .service-advantages {
+    background: #e5e5e5 ;
+  }
 }
 @media all and (max-width: 992px) and (min-width: 768px) {
   .services .services-list .services-list-col .services-sub {
@@ -341,6 +366,18 @@
   }
   .main_favorite .propositions-col {
     justify-content: center;
+  }
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+  .card-item_main {
+    flex-wrap: wrap;
+  }
+  .main_card .propositions__price {
+    min-width: 150px;
+  }
+  .main_card .propositions-group {
+    flex-wrap: wrap;
   }
 }
 @media all and (min-width: 640px) {
@@ -442,6 +479,22 @@
   }
   #pagination {
     width: 80%;
+  }
+  .main_card .propositions-group {
+    margin-left: 0;
+  }
+  .main_card .propositions-group a {
+    margin-right: 0 !important;
+  }
+  .main_card .propositions-parametrs {
+    padding: 20px 5px;
+  }
+  .main_card .card-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .main_card .card-item .card-form {
+    padding: 20px 10px 70px 15px;
   }
 }
 @media all and (max-width: 479px) {
@@ -554,9 +607,19 @@
   section.hot-form .hot-form-holder form input[type="text"] {
     padding-left: 10px;
   }
+  .main_news .services-article .services-article-item .services-article-left {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  .main_news .hot-form .hot-form-holder input[type="text"] {
+    width: auto;
+  }
 }
 @media all and (max-width: 320px) {
   footer .footer-inner {
     padding: 20px 10px;
+  }
+  .main_reviews .reviews-item {
+    padding: 15px;
   }
 }

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>komanda</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-top-w">
+      <nav class="nav-top page-content">
+        <ul class="menu-top ">
+          <li>
+            <a href="#">О компании <i class="arrow down"></i></a>
+            <ul class="menu-top__drop">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Партнёры</a></li>
+              <li><a href="#">Отзывы клиентов</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Кадровая школа</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Команда</a></li>
+          <li><a href="#">Бесплатные консультации</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Новости </a></li>
+          <li><a href="#">Поиск по каталогу</a></li>
+          <li><a href="#">Поиск по карте</a></li>
+        </ul>
+        <div class="social">
+          <a class="vk" href="#"></a>
+          <a class="facebook" href="#"></a>
+          <a class="instagram" href="#"></a>
+          <a class="star" href="#"></a>
+          <a href="#">Избранное</a>
+        </div>
+      </nav>
+    </div>
+    <div class="header-w page-content">
+      <div class="header-left">
+        <a href="/" class="logo"><img src="images/logo.png" alt="logo"></a>
+        <div class="phone">
+          <p>По РФ бесплатно</p>
+          <span>+ 7 (495) 795 -00-22</span>
+          <a href="#">Перезвонить вам?</a>
+        </div>
+        <div class="contacts">
+          <p>Пн-Пт 09:00 - 21:00, Сб. 10:00 -16:00</p>
+          <span>г. Москва, м. Баррикадная
+          Ул. Садово-Кудринская, 2/6</span>
+          <a href="#">Схема проезда</a>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="deal">
+          <img src="images/deal.png" alt="deal">
+          <p>Ваша сделка застрахована</p>
+        </div>
+        <div class="certificate">
+          <img onclick="myCertificatePopup()" src="images/sertificate.png" alt="sertificate">
+          <span onclick="myCertificatePopup()">Сертификат</span>
+          <div id="certificate" class="certificate-popup ">
+            <img src="images/certificate.png" alt="certificate">
+            <span class="fa fa-times close" id="certificateClose"></span>
+          </div>
+        </div>
+        <div class="reward">
+          <img src="images/gold-sertificate.png" alt="gold-sertificate">
+          <a href="#">
+            ВТБ Банк Москвы наградил компанию БЕСТ-Недвижимость
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-w">
+      <div class="header-menu page-content">
+        <ul class="topnav" id="myTopnav">
+          <li class="topnav__item parent-dropdown">
+            <a href="#">Услуги&nbsp;<i>&#9776;</i></a>
+            <div class="services-list">
+              <div class="services-list-col">
+                <div class="services-title-w">
+                  <h3>Новостройки</h3>
+                </div>
+                <div class="services-sub">
+                  <h4>Услуги по покупке </h4>
+                  <ul>
+                    <li><a href="#">Купить квартиру в новостройке</a></li>
+                    <li><a href="#">TRADE-IN на новостройку</a></li>
+                    <li><a href="#">Юридическая экспертиза документов</a></li>
+                    <li><a href="#">Сопровождение при подписании договора</a></li>
+                    <li><a href="#">Военная ипотека</a></li>
+                    <li><a href="#">Покупка квартиры в ипотеку</a></li>
+                  </ul>
+                </div>
+                <div class="services-sub">
+                  <h4>Услуги по продаже</h4>
+                  <ul>
+                    <li><a href="#">Продать квартиру в новостройке</a></li>
+                    <li><a href="#">Сопровождение продажи новостройки</a></li>
+                    <li><a href="#">Консультация</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-list-col">
+                <div class="services-title-w">
+                  <h3> Вторичный рынок</h3>
+                </div>
+                <div class="services-sub">
+                  <h4>Услуги по покупке </h4>
+                  <ul>
+                    <li><a href="#">Купить квартиру</a></li>
+                    <li><a href="#">Юридическая экспертиза документов</a></li>
+                    <li><a href="#">Сопровождение сделки</a></li>
+                    <li><a href="#">Военная ипотека</a></li>
+                    <li><a href="#">Покупка квартиры в ипотеку</a></li>
+                  </ul>
+                </div>
+                <div class="services-sub">
+                  <h4>Услуги по продаже</h4>
+                  <ul>
+                    <li><a href="#">Продать квартиру</a></li>
+                    <li><a href="#">Продать долю в квартире</a></li>
+                    <li><a href="#">Срочный выкуп квартиры, комнаты, доли</a></li>
+                    <li><a href="#">Выкуп недвижимости из-под залога</a></li>
+                    <li><a href="#">Подготовка пакета документов для продажи</a></li>
+                    <li><a href="#">Сопровождение сделки</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-list-col">
+                <div class="services-title-w">
+                  <h3>Сопровождение и организация сделок</h3>
+                </div>
+                <div class="services-sub">
+                  <ul>
+                    <li><a href="#">Сопровождение сделки</a></li>
+                    <li><a href="#">Составление договора</a></li>
+                    <li><a href="#">Сопровождение договора аванса</a></li>
+                    <li><a href="#">Сопровождение основного договора</a></li>
+                    <li><a href="#">Организация проведения сделки</a></li>
+                    <li><a href="#">Сопровождение на просмотр и выбор квартиры</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="topnav__item"><a href="#">Квартиры</a></li>
+          <li class="topnav__item"><a href="#">Новостройки</a></li>
+          <li class="topnav__item"><a href="#">Загородная недвижимость</a></li>
+          <li class="topnav__item"><a href="#">Спецпредложения</a></li>
+          <li class="topnav__item"><a href="#">Партнерам</a></li>
+          <li class="topnav__item leave-order">
+            <a onclick="myPopup()" id="popup-btn" href="javascript:void(0)">Оставить заявку</a>
+            <div class="popup-wrapper" id="popup">
+              <h2>Оставить заявку</h2>
+              <p>Менеджер позвонит вам в течение 10-15 минут</p>
+              <form class="popup-form" action="">
+                <div class="popup-form__name">
+                  <label>Ваше имя</label>
+                  <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+                  <p>Так мы будем знать, как к вам обращаться</p>
+                </div>
+                <div class="popup-form__agent">
+                  <label>Выберите агента</label>
+                  <select class="fourth-select">
+                    <option data-display="Казарин Павел">Nothing</option>
+                    <option value="1">Some option</option>
+                    <option value="2">Another option</option>
+                    <option value="3" disabled>A disabled option</option>
+                    <option value="4">Potato</option>
+                  </select>
+                </div>
+                <div class="popup-form__phone">
+                  <label>Телефон</label>
+                  <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+                  <p>Обязательно для быстрой связи</p>
+                </div>
+                <div class="popup-form__mail">
+                  <label>Е-mail (электронная почта)</label>
+                  <input class="nice-select" type="text" placeholder="@">
+                  <p>Обязательно. На этот адрес придет письмо от менеджера, если не удасться с вами связаться по телефону.</p>
+                </div>
+                <div class="popup-form__mailing">
+                  <input type="checkbox" id="box-1">
+                  <label for="box-1">Подписаться на ежемесячную новостную рассылку</label>
+                </div>
+                <p class="popup-form_orders">
+                  Заявки обрабатываются в будни. с 9-21, в выходные с 10-17
+                </p>
+                <input type="submit" class="popup-form__btn" value="Отправить заявку">
+                </input>
+                <div class="popup-form__make">
+                  <input type="checkbox" id="box-2">
+                  <label for="box-2">С отделкой</label>
+                </div>
+                <div class="popup-form__make">
+                  <input type="checkbox" id="box-3">
+                  <label for="box-3">Без отделки</label>
+                </div>
+              </form>
+              <span class="fa fa-times close" id="closeMe"></span>
+            </div>
+          </li>
+          <li class="icon"><a href="javasctipt:void(0);" style="font-size: 15px;" onclick="myFunction()">&#9776;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="search-w">
+      <div class="search page-content">
+        <form class="search-form" action="">
+          <div class="realty">
+            <label>Недвижимость</label>
+            <select class="first-select">
+              <option data-display="Купить квартиру">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <div class="rooms">
+            <label>Количество комнат</label>
+            <select class="second-select">
+              <option data-display="Комнат">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <div class="cost">
+            <label>Цена, Руб.</label>
+            <input class="nice-select" type="text" placeholder="От">
+            <span>&ndash;</span>
+            <input class="nice-select" type="text" placeholder="До">
+          </div>
+          <div class="city">
+            <label>Город, область</label>
+            <select class="third-select">
+              <option data-display="Все">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <input type="submit" value="Найти">
+          <button class="view-on-map">
+            Показать на карте
+          </button>
+        </form>
+        <a class="search-more" href="#">Расширенный поиск</a>
+      </div>
+    </div>
+  </header>
+  <main class="main main_comand">
+    <ul class="breadcrumb page-content">
+      <li><a href="#">Главная</a></li>
+      <li class="active-page"><a href="#">Команда</a></li>
+    </ul>
+    <section class="services page-content">
+      <div class="services-article">
+        <div class="services-article-w">
+          <h1>Команда</h1>
+          <div class="consult-search">
+            <form class="articles">
+
+              <input type="text" placeholder="Имя, телефон ...">
+              <input type="submit" value="Искать">
+              <select class="tenth-select">
+                <option data-display="Москва">Nothing</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="3" disabled>A disabled option</option>
+                <option value="4">Potato</option>
+              </select>
+              <select class="eleventh-select">
+                <option data-display="Специализация">Nothing</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="3" disabled>A disabled option</option>
+                <option value="4">Potato</option>
+              </select>
+            </form>
+          </div>
+          <div class="consultants-all">
+            <div class="consultants-item">
+              <img src="images/portal-img1.jpg" alt="portal-img1">
+              <p class="consultants__name">Смирнова Наталья Валерьевна</p>
+              <p class="consultants__position">Руководитель отдела</p>
+              <p class="consultants_locations">БЕСТ-Недвижимость на Баррикадной</p>
+              <p><a class="consultants__phone" href="tel:+7(495) 795-00-22">+7(495) 795-00-22</a></p>
+              <p><a class="consultants__mail" href="mailto:">info@best-comfort.ru</a></p>
+              <a href="#" class="consultants__ads">10 объявлений</a> <a href="#" class="consultants__revievs">2 отзыва</a>
+              <a href="#" class="leave__order"><span>оставить заявку</span></a>
+              
+            </div>
+            <div class="consultants-item">
+              <img src="images/portal-img1.jpg" alt="portal-img1">
+              <p class="consultants__name">Смирнова Наталья Валерьевна</p>
+              <p class="consultants__position">Руководитель отдела</p>
+              <p class="consultants_locations">БЕСТ-Недвижимость на Баррикадной</p>
+              <p><a class="consultants__phone" href="tel:+7(495) 795-00-22">+7(495) 795-00-22</a></p>
+              <p><a class="consultants__mail" href="mailto:">info@best-comfort.ru</a></p>
+              <a href="#" class="consultants__ads">10 объявлений</a> <a href="#" class="consultants__revievs">2 отзыва</a>
+              <a href="#" class="leave__order"><span>оставить заявку</span></a>
+           
+            </div>
+            <div class="consultants-item">
+              <img src="images/portal-img1.jpg" alt="portal-img1">
+              <p class="consultants__name">Смирнова Наталья Валерьевна</p>
+              <p class="consultants__position">Руководитель отдела</p>
+              <p class="consultants_locations">БЕСТ-Недвижимость на Баррикадной</p>
+              <p><a class="consultants__phone" href="tel:+7(495) 795-00-22">+7(495) 795-00-22</a></p>
+              <p><a class="consultants__mail" href="mailto:">info@best-comfort.ru</a></p>
+              <a href="#" class="consultants__ads">10 объявлений</a> <a href="#" class="consultants__revievs">2 отзыва</a>
+              <a href="#" class="leave__order"><span>оставить заявку</span></a>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+        <div class="services-sidebar">
+          <div class="services-sidebar__question">
+            <h3 class="sidebar__question-title">Задайте свой вопрос агенту по недвижимости</h3>
+            <p class="sidebar__question-text">
+              Наши специалисты ответят в кратчайшие сроки и подскажут, как правильно поступить в вашей ситуации.
+            </p>
+            <p class="sidebar__question-text"> Доверьте решение своей проблемы квалифицированным риэлторам!</p>
+            <a onclick="myPopupQuestion()" href="javascript:void(0);" class="free-question" id="free-question-btn">
+              бесплатно
+              <span>задать вопрос</span>
+            </a>
+          </div>
+          <div class="portal-sidebar-top">
+            <h3>Агенты месяца</h3></div>
+          <div class="portal-sidebar-item">
+            <img src="images/portal-img1.jpg" alt="portal-img1">
+            <p class="sidebar-item__name">Смирнова Наталья Валерьевна</p>
+            <p class="sidebar-item__position">Руководитель отдела</p>
+            <p><a class="sidebar-item__mail" href="mailto:">info@best-comfort.ru</a></p>
+            <p><a class="sidebar-item__phone" href="tel:+7(495) 795-00-22">+7(495) 795-00-22</a></p>
+          </div>
+          <div class="portal-sidebar-item">
+            <img src="images/portal-img2.jpg" alt="portal-img1">
+            <p class="sidebar-item__name">Зверев Иван Михайлович</p>
+            <p class="sidebar-item__position">Руководитель отдела</p>
+            <p><a class="sidebar-item__mail" href="mailto:">info@best-comfort.ru</a></p>
+            <p><a class="sidebar-item__phone" href="tel:+7(495) 795-00-22">+7(495) 795-00-22</a></p>
+          </div>
+          <div class="bottom-articles-col">
+            <h3 class="rewards__heading"> ПОСЛЕДНИЕ  Новости</h3>
+            <div class="bottom-articles-holder">
+              <div class="bottom-articles-item">
+                <div class="articles-col__time">09.03.2017&emsp;18.47</div>
+                <h4><a href="#" class="col__title-link">Согласование перепланировки квартиры. Инструкция к действию</a></h4>
+                <p class="sidebar__question-important">Так выглядит очень важная новость!!!! БЕСТ-Недвижимость" в премии "Надежный тандем"...</p>
+              </div>
+              <div class="bottom-articles-item">
+                <div class="articles-col__time">09.03.2017&emsp;18.47</div>
+                <h4><a href="#" class="col__title-link">В Сочи договорились о завершении строительства аэропорта в Саратове</a></h4>
+                <p>С удовольствием сообщаем, что Банк ВТБ24 наградил ГК БЕСТ-Недвижимость" в премии "Надежный тандем"...</p>
+              </div>
+              <div class="bottom-articles-item">
+                <div class="articles-col__time">09.03.2017&emsp;18.47</div>
+                <h4><a href="#" class="col__title-link">Московская область оказалась в лидерах по реализации «майских указов»</a></h4>
+              </div>
+              <div class="bottom-articles-item">
+                <div class="articles-col__time">09.03.2017&emsp;18.47</div>
+                <h4><a href="#" class="col__title-link">Зауралье получит 81,5 млн рублей на обеспечение жильем детей-сирот</a></h4>
+                <p>С удовольствием сообщаем, что Банк ВТБ24 наградил ГК БЕСТ-Недвижимость" в премии "Надежный тандем"...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hot-proposition">
+      <div class="hot-proposition-title">
+        <div class="page-content">
+          <h2>Горячие спецпредложения</h2>
+        </div>
+      </div>
+      <div class="hot-result page-content">
+        <!-- Slider main container -->
+        <div class="swiper-container2 swiper-container-horizontal">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" style="transform: translate3d(-2340px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide hot-col swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <!-- Slides -->
+            <div class="swiper-slide hot-col swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col" data-swiper-slide-index="2" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-prev" data-swiper-slide-index="3" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hot-col swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 292.5px;">
+              <div class="col-holder">
+                <figure class="effect-julia">
+                  <img src="images/proposition1.jpg" alt="img21">
+                  <figcaption>
+                    <div class="propositions-hover">
+                      <a class="propositions-photo-count">
+                        <span>6</span>
+                      </a>
+                      <div class="stars">
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__enable"></div>
+                        <div class="star__disable"></div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <a href="#" class="col__title-link">ЖК «BRAVO»</a>
+                <p class="adress">Мытищи, мкр. 29, ул. Силикатная, 7</p>
+                <div class="propositions-parametrs">
+                  <p>
+                    Сдача: 4 квартал 2016 года. Дом построен. Ипотека с господдержкой. Рассрочка до 70 % от цены объекта. Возможен TRADE IN - обмен Вашей старой квартиры на новую
+                  </p>
+                  <button class="hot__btn">+7 (495) 795-00-22</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+        <a href="#" class="special-action">Все спецпредложения</a>
+      </div>
+    </section>
+    <section class="fresh-realty page-content">
+      <h2 class="realty-title">Поиск недвижимости на портале агентства недвижимости
+ «БЕСТ-Недвижимость на Баррикадной»</h2>
+      <div class="realty-w">
+        <div class="realty-col">
+          <h3>Стоимость квартиры:</h3>
+          <ul>
+            <li><a href="#">до 2 млн. руб</a></li>
+            <li><a href="#">от 2 млн.руб до 3 млн.руб</a></li>
+            <li><a href="#">от 5 млн.руб до 10 млн.руб.</a></li>
+            <li><a href="#">от 10 млн.руб до 50 млн.руб</a></li>
+            <li><a href="#">от 3 млн.руб до 5 млн.руб</a></li>
+            <li><a href="#">выше 50 млн. руб</a></li>
+            <li><a href="#">Только с ипотекой</a></li>
+          </ul>
+        </div>
+        <div class="realty-col">
+          <h3>Площадь квартиры:</h3>
+          <ul>
+            <li><a href="#">до 15 кв.м</a></li>
+            <li><a href="#">от 15 до 30 кв.м</a></li>
+            <li><a href="#">от 30 до 50 кв.м</a></li>
+            <li><a href="#">от 50 до 100 кв.м</a></li>
+            <li><a href="#">от 100 кв.м и выше</a></li>
+            <li><a href="#">комната</a></li>
+          </ul>
+        </div>
+        <div class="realty-col">
+          <h3>Популярные районы:</h3>
+          <ul>
+            <li><a href="#">Ленинский р-он</a></li>
+            <li><a href="#">Щелковский р-он</a></li>
+            <li><a href="#">Пушкинский р-он</a></li>
+            <li><a href="#">Одинцовский р-он</a></li>
+            <li><a href="#">Царицыно</a></li>
+            <li><a href="#">Красногорский р-он</a></li>
+            <li><a href="#">Мытищинский р-он</a></li>
+          </ul>
+        </div>
+        <div class="realty-col">
+          <h3>Загородные дома:</h3>
+          <ul>
+            <li><a href="#">Загородная недвижимость</a></li>
+            <li><a href="#">Участки ИЖС</a></li>
+            <li><a href="#">До 5 млн.руб</a></li>
+            <li><a href="#">До 4 млн.руб</a></li>
+            <li><a href="#">До 3 млн.руб</a></li>
+            <li><a href="#">Участок СНТ</a></li>
+            <li><a href="#">Части дома</a></li>
+          </ul>
+        </div>
+        <div class="realty-col">
+          <h3>Коммерческая недвижимость:</h3>
+          <ul>
+            <li><a href="#">Торговая площадь</a></li>
+            <li><a href="#">Бизнес-Центр</a></li>
+            <li><a href="#">Офис</a></li>
+            <li><a href="#">Машиноместо</a></li>
+            <li><a href="#">Гараж</a></li>
+            <li><a href="#">Производство</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner page-content">
+      <div class="footer-top">
+        <a href="#" class="logo-footer">
+          <img src="images/footer-logo.png" alt="#">
+        </a>
+        <div class="services-footer">
+          <div class="rielty-footer">
+            <h3>НЕДВИЖИМОСТЬ</h3>
+            <ul>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Квартиры</a></li>
+              <li><a href="#">Новостройки</a></li>
+              <li><a href="#">Загородная недвижимость</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="#">Оставить заявку</a></li>
+            </ul>
+          </div>
+          <div class="agency-footer">
+            <h3>АГЕНСТВО</h3>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Команда</a></li>
+              <li><a href="#">Бесплатные консультации</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Поиск по каталогу</a></li>
+              <li><a href="#">Команда</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Поиск по карте</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contacts-footer">
+          <div class="footer-phone">
+            <p class="footer-phone__free">По РФ бесплатно</p>
+            <p class="footer-phone_call">+7 (495) 795-00-22</p>
+            <a href="#" class="footer-phone__recall">Перезвонить вам?</a>
+          </div>
+          <div class="footer-contacts">
+            <p class="footer-contacts__time">Пн–Пт 09:00–21:00, Сб 10:00–16:00</p>
+            <p class="footer-contacts__adress">г. Москва, м.Баррикадная, ул.Садовая-Кудринская, 2/62</p>
+            <a href="#" class="footer-contacts__map">Схема проезда</a>
+          </div>
+          <div class="social">
+            <a class="vk" href="#"></a>
+            <a class="facebook" href="#"></a>
+            <a class="instagram" href="#"></a>
+            <a class="star" href="#"></a>
+            <a href="#">Избранное</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer__copy">&#9400; 2010-2017, Агентство недвижимости «БЕСТ-Недвижимость на Баррикадной» </p>
+        <a href="#" class="footer__site-map">Карта сайта</a>
+        <a href="#" class="footer__develop">Разработка сайта: <span>Swaxis</span></a>
+      </div>
+      <div class="go-top"> <span class="go-to-top"></span></div>
+    </div>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script> -->
+  <script src="js/swiper.min.js"></script>
+  <script src="https://use.fontawesome.com/4b310329d0.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('.first-select, .second-select, .third-select, .fourth-select, .fifth-select, .sixth-select, .ninth-select, .tenth-select, .eleventh-select').niceSelect();
+  });
+  </script>
+</body>
+
+</html>

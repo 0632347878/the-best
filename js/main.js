@@ -136,6 +136,51 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 	 },
 });
 
+var myFifthSwiper = new Swiper('.swiper-container3', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	  spaceBetween: 0,
+	// autoplay: 2000,
+	// If we need pagination
+	// pagination: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	slidesPerView: 7,
+	breakpoints: {
+	   // when window width is <= 320px
+	   320: {
+	     slidesPerView: 2,
+	    
+	   },
+	   // when window width is <= 480px
+	   480: {
+	     slidesPerView: 2,
+	     spaceBetween: 0
+	   },
+	   // when window width is <= 640px
+	   640: {
+	     slidesPerView: 2,
+	     spaceBetween: 0,
+	     // spaceBetween: 30
+	   },
+	   768: {
+	      slidesPerView: 3,
+	      spaceBetween: 0,
+	    },
+	  992: {
+	     slidesPerView: 4,
+	     spaceBetween: 0,
+	   },
+
+	   1170: {
+	     slidesPerView: 7,
+	     spaceBetween: 0,
+	   }
+	 },
+})
+
+
   /* -------------------------  */
  /* ---------GAMBURGER---------*/ 
 /* -------------------------  */ 
