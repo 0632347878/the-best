@@ -138,7 +138,7 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 var myThirdSwiper = new Swiper('.swiper-container5', {
 	// Optional parameters
 	direction: 'horizontal',
-	// loop: true,
+	loop: true,
 	  spaceBetween: 0, /*-17*/
 	// autoplay: 2000,
 	// If we need pagination
@@ -149,17 +149,17 @@ var myThirdSwiper = new Swiper('.swiper-container5', {
 	breakpoints: {
 	   // when window width is <= 320px
 	   320: {
-	     slidesPerView: 2,
+	     slidesPerView: 1,
 	    
 	   },
 	   // when window width is <= 480px
 	   480: {
-	     slidesPerView: 3,
+	     slidesPerView: 2,
 	     spaceBetween: 0
 	   },
 	   // when window width is <= 640px
 	   640: {
-	     slidesPerView: 4,
+	     slidesPerView: 3,
 	     spaceBetween: 0,
 	     // spaceBetween: 30
 	   },
@@ -271,7 +271,7 @@ if (window.matchMedia('(max-width: 992px)').matches) {
 	var hideeLi  = document.querySelector('.parent-dropdown');
 	var myNav    = document.getElementById('myTopnav');
 	if(services == null) {
-		console.log('Yes you are');
+		
 		hideeLi.classList.add('hidden');
 	}
 }
@@ -285,15 +285,31 @@ var popupBtn = document.getElementById("popup-btn");
 var popup    = document.querySelector(".popup-wrapper");
 var closeSpan    = document.getElementById("closeMe");
 
-	function myPopup(){
+	function myPopup() {
 		popup.classList.add("fadeInDown");
 		$('.leave-order').css("z-index", "20");
+		
+
+		if (window.matchMedia('(max-width: 992px)').matches) {
+			$('body').css('overflow', 'hidden');
+			$('#popup').css({'overflow-x': 'hidden', "bottom":"0"});
+			$('.icon').css({'z-index': '1', "opacity":".99"});
+		}
+
   }
 
 	function close() {
 		popup.classList.add("fadeInDownReverce");
 		popup.classList.remove("fadeInDown"); 
 		 $('.leave-order').css("z-index", "5");
+
+		 if (window.matchMedia('(max-width: 992px)').matches) {
+		 	$("body").css("overflow", "inherit");
+		 	$('#popup').css({'overflow-x': 'inherit', "bottom":"auto"});
+		 	$('.icon').css({'z-index': '20', "opacity":"1"});
+		 }
+
+		 
 		setTimeout(function() {
 		popup.classList.remove("fadeInDownReverce");
 		}, 1000);
@@ -332,19 +348,31 @@ var closeSpanQuestion    = document.getElementById("question-close");
 	function myPopupQuestion(){
 		if(!(closeSpanQuestion == null)) {
 		popupQuestion.classList.add("fadeInDown");
+
+			if (window.matchMedia('(max-width: 992px)').matches) {
+				$('body').css('overflow', 'hidden');
+				$('.question-popup').css({'overflow-x': 'hidden', "bottom":"0"});
+				
+			}
 		}
   }
 
-	function closeQuestion() {
 		if(!(closeSpanQuestion == null)) {
+	function closeQuestion() {
 		popupQuestion.classList.add("fadeInDownReverce");
 		popupQuestion.classList.remove("fadeInDown"); 
 		setTimeout(function() {
 		popupQuestion.classList.remove("fadeInDownReverce");
 		}, 1000);
+
+		if (window.matchMedia('(max-width: 992px)').matches) {
+			$("body").css("overflow", "inherit");
+			$('.question-popup').css({'overflow-x': 'inherit', "bottom":"auto"});
+			
+		}
 	}
-}
 closeSpanQuestion.addEventListener('click', closeQuestion);
+}
 
 /*review*/
 
@@ -357,11 +385,23 @@ var closeSpanReview    = document.getElementById("review-close");
 		if(!(closeSpanReview == null)) {
 		popupReview.classList.add("fadeInDown");
 		
+		if (window.matchMedia('(max-width: 992px)').matches) {
+			$('body').css('overflow', 'hidden');
+			$('.review-popup').css({'overflow-x': 'hidden', "bottom":"0"});
+			
+		}
   }
 
 	function closeReview() {
 		popupReview.classList.add("fadeInDownReverce");
 		popupReview.classList.remove("fadeInDown"); 
+
+		if (window.matchMedia('(max-width: 992px)').matches) {
+			$("body").css("overflow", "inherit");
+			$('.question-popup').css({'overflow-x': 'inherit', "bottom":"auto"});
+			
+		}
+
 		setTimeout(function() {
 		popupReview.classList.remove("fadeInDownReverce");
 		}, 1000);
@@ -369,6 +409,31 @@ var closeSpanReview    = document.getElementById("review-close");
 
 closeSpanReview.addEventListener('click', closeReview);
 }
+
+// Scroll for popups 
+
+
+
+
+
+
+	// if (window.matchMedia('(max-width: 992px)').matches) {
+
+
+
+	//  	var popupScrollBlock = document.getElementById('popup');
+
+	// 	if( popupScrollBlock.classList == "popup-wrapper fadeInDown" ) {
+
+	// 		console.log('hello');
+			
+	// 	};
+	// }	
+
+
+// end Scroll for popups
+
+
 
   /* -------------------------  */
  /* ---------GO-TO-----------  */ 

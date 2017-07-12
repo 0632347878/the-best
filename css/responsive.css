@@ -149,6 +149,27 @@
   .main_favorite .effect-julia {
     min-width: 260px;
   }
+  .partner__delimiter {
+    display: none;
+  }
+  .partner__price {
+    display: block;
+    width: 100%;
+  }
+  .partner-form-item__mod h4 {
+    flex-wrap: wrap;
+  }
+  .partner-form-item label:after {
+    content: " ";
+    border-bottom: 2px #999 dashed ;
+    display: block;
+    width: 200px;
+    margin: 5px 0;
+    background: #333;
+  }
+  section.section-search {
+    padding: 0 15px;
+  }
 }
 @media all and (max-width: 992px) {
   /*menu-gamburger*/
@@ -299,6 +320,26 @@
   .main_answer .services-sidebar {
     padding: 7px;
   }
+  /*.main_partner {
+		.services-article {
+
+		}
+	}	*/
+  .main_partner .services-article {
+    display: block;
+  }
+  .portal-sidebar-item img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 992px) {
+  .main_partner .services-article-w {
+    width: 73%;
+  }
+  .main_partner .services-sidebar {
+    width: 23.7%;
+  }
 }
 @media all and (max-width: 992px) and (min-width: 768px) {
   .services .services-list .services-list-col .services-sub {
@@ -308,6 +349,26 @@
 @media all and (max-width: 992px) and (min-width: 640px) {
   .bottom-articles .bottom-articles-col:last-child {
     margin-top: 40px;
+  }
+}
+@media all and (min-width: 768px) {
+  .services-advantages-col:first-child {
+    order: 1;
+  }
+  .services-advantages-col:nth-child(2) {
+    order: 3;
+  }
+  .services-advantages-col:nth-child(3) {
+    order: 5;
+  }
+  .services-advantages-col:nth-child(4) {
+    order: 2;
+  }
+  .services-advantages-col:nth-child(5) {
+    order: 4;
+  }
+  .services-advantages-col:nth-child(6) {
+    order: 6;
   }
 }
 @media all and (max-width: 768px) {
@@ -363,10 +424,6 @@
   }
   .services .services-sidebar {
     padding-left: 15px;
-  }
-  .services .portal-sidebar-item img {
-    max-width: 70%;
-    margin: 0 auto;
   }
   .footer-top {
     flex-flow: column wrap;
@@ -424,6 +481,12 @@
   }
   .main_answer .card-form {
     padding: 15px 20px;
+  }
+  .main_partner .services-sidebar {
+    padding: 0 7px;
+  }
+  .main_news .services-sidebar {
+    margin-top: 20px;
   }
 }
 @media all and (min-width: 640px) {
@@ -512,8 +575,65 @@
   .consultant-nav {
     margin-left: 0;
   }
+  .popup-wrapper,
+  .question-popup,
+  .review-popup {
+    padding: 30px 20px 30px 20px;
+  }
+  .popup-wrapper .popup-form,
+  .question-popup .popup-form,
+  .review-popup .popup-form {
+    flex-direction: column;
+  }
+  .popup-wrapper .popup-form div,
+  .question-popup .popup-form div,
+  .review-popup .popup-form div,
+  .popup-wrapper .popup-form .popup-form_orders,
+  .question-popup .popup-form .popup-form_orders,
+  .review-popup .popup-form .popup-form_orders {
+    width: 100%;
+  }
+  .popup-wrapper .popup-form .popup-form_orders,
+  .question-popup .popup-form .popup-form_orders,
+  .review-popup .popup-form .popup-form_orders {
+    padding-left: 0;
+  }
+  .popup-wrapper .popup-form .popup-form__make,
+  .question-popup .popup-form .popup-form__make,
+  .review-popup .popup-form .popup-form__make {
+    text-align: left;
+  }
+  .popup-wrapper .popup-form .popup-form__btn,
+  .question-popup .popup-form .popup-form__btn,
+  .review-popup .popup-form .popup-form__btn {
+    margin: 10px auto;
+  }
+  .popup-wrapper .popup-form__mailing,
+  .question-popup .popup-form__mailing,
+  .review-popup .popup-form__mailing {
+    margin-top: 30px !important;
+  }
+  .popup-wrapper .popup-form__mailing label,
+  .question-popup .popup-form__mailing label,
+  .review-popup .popup-form__mailing label {
+    padding-top: 25px;
+    padding-left: 0 !important;
+  }
 }
 @media all and (max-width: 480px) {
+  .main_service .services-advantages {
+    flex-direction: column;
+  }
+  .main_service .services-advantages .services-advantages-col {
+    min-width: auto ;
+  }
+  .main_service .services-list2 {
+    margin: 0;
+  }
+  .main_service .services-list2 .services-list2-col {
+    max-width: 300px;
+    margin: 0 auto;
+  }
   .header-w {
     padding-left: 0;
   }
@@ -601,6 +721,21 @@
     margin: 10px auto;
     margin-right: auto;
     align-self: center;
+  }
+  .main_partner .partner-form-item,
+  .main_partner .partner-agree {
+    padding-left: 50px;
+  }
+  .main_partner .partner-form .heading3-18 {
+    padding-left: 5px;
+  }
+  .main_partner .partner-form-item input[type="checkbox"] + label:before,
+  .main_partner .partner-agree input[type="checkbox"] + label:before {
+    left: 5px;
+  }
+  .services-article-w {
+    margin-right: 0;
+    padding: 0 7px;
   }
 }
 @media all and (max-width: 479px) {

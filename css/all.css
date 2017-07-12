@@ -1792,7 +1792,7 @@ section.services .services-list__title {
 .review-popup {
   display: none;
   max-width: 810px;
-  width: 100%;
+  width: 98%;
   z-index: 99;
   position: fixed;
   top: 50%;
@@ -2117,10 +2117,13 @@ section.services .services-list__title {
 .main-search {
   margin-right: 2.1%;
   flex: 1 1 74%;
+  margin-bottom: 15px;
 }
 .description-search {
   flex: 1 1 23.9%;
   padding: 10px 15px 15px 20px;
+  min-width: 255px;
+  max-width: 500px;
   background-color: #f1f1f2;
 }
 .description-search .role-panel {
@@ -3301,24 +3304,6 @@ form.articles input[type="submit"]:hover {
   margin: 0 25px 0 15px;
   padding: 1.5px;
 }
-.main_service .services-advantages .services-advantages-col:first-child {
-  order: 1;
-}
-.main_service .services-advantages .services-advantages-col:nth-child(2) {
-  order: 3;
-}
-.main_service .services-advantages .services-advantages-col:nth-child(3) {
-  order: 5;
-}
-.main_service .services-advantages .services-advantages-col:nth-child(4) {
-  order: 2;
-}
-.main_service .services-advantages .services-advantages-col:nth-child(5) {
-  order: 4;
-}
-.main_service .services-advantages .services-advantages-col:nth-child(6) {
-  order: 6;
-}
 .main_service .services-safe {
   text-align: center;
   margin-bottom: 7px;
@@ -3841,6 +3826,7 @@ form.articles input[type="submit"]:hover {
   flex-wrap: wrap;
   border-bottom: 1px #ccc solid;
   padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 /*page main_partner*/
 .main_partner .services-article .sidebar__question-title {
