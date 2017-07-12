@@ -5,7 +5,9 @@
 			white-space: nowrap;
 		}
 	}
-
+	.popup-form__agent, .popup-form__phone {
+		margin-left: auto;
+	}
 
 }
 
@@ -274,6 +276,15 @@
 
 		}
 	} 
+	.main_partner {
+		.article-advantages-w {
+			flex-wrap: wrap;
+			.article-advantages-col {
+				width: 33.3%;
+				margin-bottom: 20px;
+			}
+		}
+	}
 	.portal-article {
 		.portal-article-w {
 			.portal-article-advantages {
@@ -329,6 +340,24 @@
 	.main_service .main_center .service-advantages {
 		background: #e5e5e5 ;
 	}
+	.main_service {
+			.card-item_main .main_center {
+				&:first-child {
+					
+					margin-bottom: 20px;
+				}
+		  }
+		  .services-sidebar-item {
+		  	min-width: 230px;
+		  }
+		} 
+		.main_answer {
+			.services-sidebar {
+				    padding: 7px;
+			}
+
+		}
+
 }
 
 @media all and (min-width: 992px) {
@@ -462,6 +491,38 @@
 			flex-wrap: wrap;	
 		}
 	}
+	.main_service {
+	 .services-rewards {
+	  	margin-right: 0;
+	  }
+	  .main_center:first-child {
+	  	margin-right: 0;
+	  }
+	}		  
+	.service-answer {
+		flex-wrap: wrap;
+		.service-answer_question {
+			margin-bottom: 20px;
+		}
+	}
+	.main_answer {
+		.card-form {
+			.popup-form__name, .popup-form__agent,
+			.popup-form__mail, .popup-form__phone {
+				width: 100% !important;
+				margin-right: 0 !important;
+			}
+		}
+	}
+	.main_answer {
+		.services-article-w {
+			margin-right: 0;
+			padding: 0 7px;
+		}
+		.card-form {
+			padding: 15px 20px;
+		}
+	}			
 }
 @media all and (min-width: 640px) {
 	.consultants-item {
@@ -561,6 +622,9 @@
   	margin-left: auto;
   	margin-right: auto;
   }
+  .consultant-nav {
+  	margin-left: 0;
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -608,6 +672,67 @@
 			.card-form {
 				padding: 20px 10px 70px 15px;
 			}
+		}
+	}
+	.main_service .partners-links .partners-links__item {
+		margin: 0 auto 25px
+	}
+	.main_service {
+		.card-item {
+			padding: 0 5px;
+		}
+	}
+	.main_service .services-advantages .services-advantages-col {
+		flex-direction: column;
+	}
+	.main_service .services-advantages .services-advantages-col p {
+		margin-top: 20px;
+	}
+	.main_service .services-advantages .services-advantages-col p:before {
+		display: none;
+	}
+	.services-list2 .services-list2-col {
+		min-width: 300px !important;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.service-answer .service-answer-main .answer-main-item > a {
+		display: inline;
+	}
+	.services-list2 .services-list2-col {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.services-list2__title {
+		text-align: center;
+	}
+	.main_center {
+		width: 100%;
+	}
+	.consultant-nav {
+		flex-direction: column;
+		a {
+			margin-bottom: 7px;
+		}
+	}
+	.consultant-nav_social {
+		flex-direction: column;
+		margin: 0 auto;
+		.consultant_social_list {
+			margin: 10px 0;
+			.consultant_twitter {
+				margin-left: 0;
+			}
+		}
+
+	}
+	.popup-form__mailing {
+		flex-direction: column;
+		.popup-form__btn {
+			margin: 10px auto;
+			margin-right: auto;
+			
+			align-self: center;
 		}
 	}
 }
@@ -774,9 +899,26 @@
 	.main_news .hot-form .hot-form-holder input[type="text"] {
 		width: auto;
 	}
+	.services-rewards {
+		width: 100%;
+	}
+	.portal-article .portal-article-w .portal-article-advantages .article-advantages-w .article-advantages-col {
+		width: 50%;
+	}
+	.main_partner {
+		.article-advantages-w {
+	
+			.article-advantages-col {
+				width: 50%;
+			}
+		}
+	}
 }
 
 @media all and (max-width: 320px) {
+	.main_service .services-advantages .services-advantages-col {
+		min-width: 300px;
+	}
 	footer {
 		.footer-inner {
 			padding: 20px 10px;
@@ -785,5 +927,8 @@
 	.main_reviews .reviews-item {
 		padding: 15px;
 	}
-	
+	.main_answer .card-form {
+		padding: 15px 5px;
+	}
+
 }

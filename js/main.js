@@ -18,7 +18,6 @@ var mySecondSwiper = new Swiper('.swiper-container2', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-
   autoplay: 2000,
   // If we need pagination
   pagination: '.swiper-pagination',
@@ -102,7 +101,7 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 	// Navigation arrows
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev',
-	slidesPerView: 5,
+	slidesPerView: 6,
 	breakpoints: {
 	   // when window width is <= 320px
 	   320: {
@@ -136,11 +135,11 @@ var myFourthSwiper = new Swiper('.swiper-container4', {
 	 },
 });
 
-var myFifthSwiper = new Swiper('.swiper-container3', {
+var myThirdSwiper = new Swiper('.swiper-container5', {
 	// Optional parameters
 	direction: 'horizontal',
-	loop: true,
-	  spaceBetween: 0,
+	// loop: true,
+	  spaceBetween: 0, /*-17*/
 	// autoplay: 2000,
 	// If we need pagination
 	// pagination: '.swiper-pagination',
@@ -155,7 +154,50 @@ var myFifthSwiper = new Swiper('.swiper-container3', {
 	   },
 	   // when window width is <= 480px
 	   480: {
-	     slidesPerView: 2,
+	     slidesPerView: 3,
+	     spaceBetween: 0
+	   },
+	   // when window width is <= 640px
+	   640: {
+	     slidesPerView: 4,
+	     spaceBetween: 0,
+	     // spaceBetween: 30
+	   },
+	   768: {
+	      slidesPerView: 4,
+	      spaceBetween: 0,
+	    },
+	  992: {
+	     slidesPerView: 5,
+	     spaceBetween: 0,
+	   },
+
+	   1170: {
+	     slidesPerView: 6,
+	     spaceBetween: 0,
+	   }
+	 },
+})
+
+var myFourthSwiper = new Swiper('.swiper-container6', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	// autoplay: 2000,
+
+	// Navigation arrows
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	slidesPerView: 4,
+	breakpoints: {
+	   // when window width is <= 320px
+	   320: {
+	     slidesPerView: 1,
+	    
+	   },
+	   // when window width is <= 480px
+	   480: {
+	     slidesPerView: 1,
 	     spaceBetween: 0
 	   },
 	   // when window width is <= 640px
@@ -169,16 +211,16 @@ var myFifthSwiper = new Swiper('.swiper-container3', {
 	      spaceBetween: 0,
 	    },
 	  992: {
-	     slidesPerView: 4,
+	     slidesPerView: 3,
 	     spaceBetween: 0,
 	   },
 
 	   1170: {
-	     slidesPerView: 7,
+	     slidesPerView: 4,
 	     spaceBetween: 0,
 	   }
 	 },
-})
+});
 
 
   /* -------------------------  */
@@ -282,9 +324,7 @@ closeSpanSertificate.addEventListener('click', closeCertificate);
 
 /* question */
 
-var indexPageInitialization = document.getElementsByTagName('title');
-// if(indexPageInitialization.innerHTML = "index") {
-	console.log('true')
+	
 var popupBtnQuestion = document.getElementById("free-question-btn");
 var popupQuestion    = document.querySelector(".question-popup");
 var closeSpanQuestion    = document.getElementById("question-close");
@@ -303,9 +343,9 @@ var closeSpanQuestion    = document.getElementById("question-close");
 		popupQuestion.classList.remove("fadeInDownReverce");
 		}, 1000);
 	}
-
-closeSpanQuestion.addEventListener('click', closeQuestion);
 }
+closeSpanQuestion.addEventListener('click', closeQuestion);
+
 /*review*/
 
 // var popupBtn = document.getElementById("popup-btn");
