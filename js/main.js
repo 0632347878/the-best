@@ -227,16 +227,19 @@ var myFourthSwiper = new Swiper('.swiper-container6', {
  /* ---------GAMBURGER---------*/ 
 /* -------------------------  */ 
 
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if(x.className === "topnav") {
-    x.className += " responsive";
-  }
-  else {
-    x.className = "topnav";
-  }
-}
 
+function myFunction() {
+var x = document.getElementById("myTopnav");
+	if(x.className === "topnav") {
+	  x.className += " responsive";
+	}
+	else {
+		  x.className += " anim"; 
+		setTimeout(function() {
+			 x.className = "topnav";
+		   }, 600);
+	}
+}
 
 
 
@@ -376,7 +379,6 @@ closeSpanQuestion.addEventListener('click', closeQuestion);
 
 /*review*/
 
-// var popupBtn = document.getElementById("popup-btn");
 
 var popupReview    = document.querySelector(".review-popup");
 var closeSpanReview    = document.getElementById("review-close");
@@ -410,31 +412,6 @@ var closeSpanReview    = document.getElementById("review-close");
 closeSpanReview.addEventListener('click', closeReview);
 }
 
-// Scroll for popups 
-
-
-
-
-
-
-	// if (window.matchMedia('(max-width: 992px)').matches) {
-
-
-
-	//  	var popupScrollBlock = document.getElementById('popup');
-
-	// 	if( popupScrollBlock.classList == "popup-wrapper fadeInDown" ) {
-
-	// 		console.log('hello');
-			
-	// 	};
-	// }	
-
-
-// end Scroll for popups
-
-
-
   /* -------------------------  */
  /* ---------GO-TO-----------  */ 
 /* -------------------------  */
@@ -454,13 +431,13 @@ $(".parent-dropdown a").click(function() {
 
 
 if(!( myClick == null )) {
-var myClick = document.querySelector('.more-panel');
-function visibleMore() {
-	if($('.more-panel').hasClass('more')) {
-	  $('#test1').addClass('visible');
+	var myClick = document.querySelector('.more-panel');
+	function visibleMore() {
+		if($('.more-panel').hasClass('more')) {
+		  $('#test1').addClass('visible');
+		}
 	}
-}
-myClick.addEventListener('click', visibleMore);
+	myClick.addEventListener('click', visibleMore);
 }
 
 

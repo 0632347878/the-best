@@ -221,7 +221,7 @@
               <span class="fa fa-times close" id="closeMe"></span>
             </div>
           </li>
-          <li class="icon"><a href="javasctipt:void(0);" style="font-size: 15px;" onclick="myFunction()">&#9776;</a></li>
+          <li class="icon"><a href="javascript:void(0);" style="font-size: 15px;" onclick="myFunction()">&#9776;</a></li>
         </ul>
       </div>
     </div>
@@ -394,6 +394,48 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="question-popup">
+        <h2>Задайте свой вопрос агенту по недвижимости</h2>
+        <form class="popup-form" action="">
+          <div class="popup-form__name">
+            <label>Ф. И. О.</label>
+            <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+            <p>Так мы будем знать, как к вам обращаться</p>
+          </div>
+          <div class="popup-form__agent">
+            <label>Выберите раздел вопроса</label>
+            <select class="fifth-select">
+              <option data-display="Казарин Леонид">Nothing</option>
+              <option value="1">Some option</option>
+              <option value="2">Another option</option>
+              <option value="3" disabled>A disabled option</option>
+              <option value="4">Potato</option>
+            </select>
+          </div>
+          <div class="popup-form__mail">
+            <label>Е-mail (электронная почта)</label>
+            <input class="nice-select" type="text" placeholder="@">
+            <p>Обязательно. На этот адрес придет письмо от менеджера, если не удасться с вами связаться по телефону.</p>
+          </div>
+          <div class="popup-form__phone">
+            <label>Телефон</label>
+            <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+            <p>Обязательно для быстрой связи</p>
+          </div>
+          <div class="add_question">
+            <label>Задайте вопрос эксперту</label>
+            <textarea name="text"></textarea>
+          </div>
+          <p>Чем подробнее вы разъясните ситуацию, тем более полным и точным будет ответ эксперта</p>
+          <div class="popup-form__mailing">
+            <input type="checkbox" id="box-4">
+            <label for="box-4">Подписаться на ежемесячную новостную рассылку</label>
+          </div>
+          <input type="submit" class="popup-form__btn" value="Отправить вопрос">
+          </input>
+        </form>
+        <span class="fa fa-times close" id="question-close"></span>
       </div>
     </section>
     <section class="hot-proposition">
