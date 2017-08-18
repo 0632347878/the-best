@@ -4017,3 +4017,19 @@ form.articles input[type="submit"]:hover {
   margin-left: 20px;
   font-size: 18px;
 }
+.main_card .propositions-parametrs p {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.main_card .propositions-parametrs p a {
+  display: inline-flex;
+}
+.main_card .propositions-parametrs p a:before {
+  position: relative;
+  top: -5px;
+}

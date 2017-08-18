@@ -4251,10 +4251,30 @@ form.articles input[type="submit"] {
 		input[type="checkbox"] + label:before {
 			top: 40px;
 		}
-	& +  .free-question {
-		border: none;
-		margin-left: 20px;
-		font-size: 18px;
+		& +  .free-question {
+			border: none;
+			margin-left: 20px;
+			font-size: 18px;
+		}
 	}
+}
+.main_card {
+	.propositions-parametrs {
+		p {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			a {
+				display: inline-flex;
+				&:before {
+					position: relative;
+					top: -5px;
+				}
+			}
+		}
 	}
 }

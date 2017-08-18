@@ -896,7 +896,11 @@
 	  	.popup-wrapper form .popup-form__name, .review-popup form .popup-form__name, .question-popup form .popup-form__name, .popup-wrapper form .popup-form__agent, .review-popup form .popup-form__agent, .question-popup form .popup-form__agent, .popup-wrapper form .popup-form__phone, .review-popup form .popup-form__phone, .question-popup form .popup-form__phone, .popup-wrapper form .popup-form__mail, .review-popup form .popup-form__mail, .question-popup form .popup-form__mail {
 	  		max-width: 100%;
 	  	}
-	 
+	.services-article-w {
+		.all-consultations + .free-question {
+			margin: 0 auto;
+		}
+	}
 }
 
 @media all and (max-width: 480px) {
@@ -1050,14 +1054,22 @@
 	}
 }
 
-@media all and (max-width: 992px) and (min-width: 375px) {
+@media all and (max-width: 992px) and (min-width: 359px) {
 	.search-w .realty, .search-w .rooms, .search-w .cost, .search-w .city,
 	.search-w .view-on-map, .search-w input[type="submit"] {
 		margin-left: 5px;
 		margin-right: 5px;
 	}
 }
-
+@media all and (max-width: 480px) {
+	.main_answer {
+		.popup-form {
+			.popup-form__btn {
+				margin: 20px auto !important;
+			}
+		}
+	}
+}
 @media all and (max-width: 479px) {
 	.main_favorite .services-article-w, .main_favorite .propositions-col  {
 		padding-left: 5px;

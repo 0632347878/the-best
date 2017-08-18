@@ -786,6 +786,9 @@
   .question-popup form .popup-form__mail {
     max-width: 100%;
   }
+  .services-article-w .all-consultations + .free-question {
+    margin: 0 auto;
+  }
 }
 @media all and (max-width: 480px) {
   .main_service .services-advantages .services-advantages-col {
@@ -910,7 +913,7 @@
     padding-top: 25px;
   }
 }
-@media all and (max-width: 992px) and (min-width: 375px) {
+@media all and (max-width: 992px) and (min-width: 359px) {
   .search-w .realty,
   .search-w .rooms,
   .search-w .cost,
@@ -919,6 +922,11 @@
   .search-w input[type="submit"] {
     margin-left: 5px;
     margin-right: 5px;
+  }
+}
+@media all and (max-width: 480px) {
+  .main_answer .popup-form .popup-form__btn {
+    margin: 20px auto !important;
   }
 }
 @media all and (max-width: 479px) {
