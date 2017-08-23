@@ -1071,6 +1071,12 @@ figure {
 	padding-bottom: 55px;
 	overflow: hidden;
 }
+	.services-sidebar__question {
+		text-align: center;
+	}
+	.sidebar__question-title {
+		justify-content: center;
+	}
 /*end reuse*/
 
 section.selection-form {
@@ -1692,23 +1698,22 @@ section.services {
 	  .bottom-articles-item {
 		margin-top: 20px;
 	  }
-	  .articles-col__time {
-		.grey-desc();
-		&:before {
-			content: url(../images/clock-icon.png);
-			width: 16px;
-			height: 16px;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 5px;
-		}
-	  }
 	}  
 	.col__title-link {
 		line-height: 1.3;
 	}
 }
-
+  .articles-col__time {
+	.grey-desc();
+	&:before {
+		content: url(../images/clock-icon.png);
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+  }
 .partners {
 	padding: 40px 15px 0; 
 	h2 {
@@ -3253,90 +3258,92 @@ form.articles input[type="submit"] {
 						margin-bottom: 15px;
 					}
 				}
-				.card-form {
-					border: 1px solid #999;
-					border-radius: 7px;
-					padding: 20px 50px 70px 60px;
-					background: #fff url(../images/logo-popup.png) no-repeat top 40px right 40px;
-					h2+p {
-						margin-bottom: 30px;
-					}
-				form {
-					display: flex;
-					flex-wrap: wrap;
-					.popup-form__name,
-					.popup-form__agent,
-					.popup-form__phone,
-					.popup-form__mail {
-						display: flex;
-						width: 50%;
-						flex-direction: column;
-						margin-right: 20px;
-						margin-bottom: 30px;
-						max-width: 350px;
+	
+}
 
-					
-					}
-			
-					.popup-form__mail, 
-					.popup-form__agent {
-						margin-right: 0;
-					}
-					label {
-						font-size: 16px;
-						font-weight: 600;
-						color: #333;
-						margin-bottom: 8px;
-					}
-					p {
-						.grey-desc();
-						font-size: 12px;
-						margin-top: 6px;
-					}
-					.popup-form__mailing {
-						width: 100%;
-						
-						label {
-							font-size: 12px;
-							font-weight: normal;			
-							color: @link-color;	
-							border-bottom: 1px dotted @link-color;
-						}
-					}
-						input[type="checkbox"] { display: none; }
-						input[type="checkbox"] + label {
-						  position: relative;
-						  padding-left: 30px;
-						  margin-bottom: 20px;
-						  cursor: pointer;
-						  -webkit-user-select: none;
-						  -moz-user-select: none;
-						  -ms-user-select: none;
-						}
-						input[type="checkbox"] + label:before {
-						  content: url(../images/checkbox-disable.png);  
-						  width: 20px;
-						  height: 20px;
-						  position: absolute;
-						  left: 0;
-						  top: 0;
-						  -webkit-transition: all .12s, border-color .08s;
-						  transition: all .12s, border-color .08s;
-						}
-						input[type="checkbox"]:checked + label:before {
-							content: url(../images/checkbox-enable.png);
-						}
-					  .popup-form_orders{
-						width: 47%;
-						padding-left: 10%;
-						margin-top: 30px;
-						font-size: 16px;
-					  }
-					  .popup-form__btn {
-						margin-right: 0;
-					  }
-				}
-				}
+.card-form {
+	border: 1px solid #999;
+	border-radius: 7px;
+	padding: 20px 50px 70px 60px;
+	background: #fff url(../images/logo-popup.png) no-repeat top 40px right 40px;
+	h2+p {
+		margin-bottom: 30px;
+	}
+form {
+	display: flex;
+	flex-wrap: wrap;
+	.popup-form__name,
+	.popup-form__agent,
+	.popup-form__phone,
+	.popup-form__mail {
+		display: flex;
+		width: 50%;
+		flex-direction: column;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		max-width: 350px;
+
+	
+	}
+
+	.popup-form__mail, 
+	.popup-form__agent {
+		margin-right: 0;
+	}
+	label {
+		font-size: 16px;
+		font-weight: 600;
+		color: #333;
+		margin-bottom: 8px;
+	}
+	p {
+		.grey-desc();
+		font-size: 12px;
+		margin-top: 6px;
+	}
+	.popup-form__mailing {
+		width: 100%;
+		
+		label {
+			font-size: 12px;
+			font-weight: normal;			
+			color: @link-color;	
+			border-bottom: 1px dotted @link-color;
+		}
+	}
+		input[type="checkbox"] { display: none; }
+		input[type="checkbox"] + label {
+		  position: relative;
+		  padding-left: 30px;
+		  margin-bottom: 20px;
+		  cursor: pointer;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		}
+		input[type="checkbox"] + label:before {
+		  content: url(../images/checkbox-disable.png);  
+		  width: 20px;
+		  height: 20px;
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  -webkit-transition: all .12s, border-color .08s;
+		  transition: all .12s, border-color .08s;
+		}
+		input[type="checkbox"]:checked + label:before {
+			content: url(../images/checkbox-enable.png);
+		}
+	  .popup-form_orders{
+		width: 47%;
+		padding-left: 10%;
+		margin-top: 30px;
+		font-size: 16px;
+	  }
+	  .popup-form__btn {
+		margin-right: 0;
+	  }
+}
 }
 
 .card-price {
@@ -4004,24 +4011,19 @@ form.articles input[type="submit"] {
 	.popup-form__phone {
 		margin-right: 0 !important;
 	}
-	.card-form {
-		padding: 15px 35px 30px 35px;
-		
-		background: #e5f3ff url(../images/logo-popup.png) no-repeat top 20px right 25px;
-		border: none;
-		margin-top: 50px;
-		.popup-form__mailing {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 23px;
-			label {
-				margin-bottom: 0 !important;
-			}
-		}
 
+
+  .sidebar__question-title {
+	display: block;
+	line-height: 1.2;
+	padding-bottom: 35px;
+	margin-bottom: 0;
   }
-  .add_question {
+  .services-sidebar .free-question {
+	margin: 0 auto;
+  }
+}
+.add_question {
 	width: 100%;
 	label {
 		margin-bottom: 15px;
@@ -4039,18 +4041,22 @@ form.articles input[type="submit"] {
 		outline: none;
 		padding: 10px;
 	}
-  }
-  .sidebar__question-title {
-	display: block;
-	line-height: 1.2;
-	padding-bottom: 35px;
-	margin-bottom: 0;
-  }
-  .services-sidebar .free-question {
-	margin: 0 auto;
-  }
 }
-   
+.card-form {
+	padding: 15px 35px 30px 35px;
+	background: #e5f3ff url(../images/logo-popup.png) no-repeat top 20px right 25px;
+	border: none;
+	margin-top: 50px;
+	.popup-form__mailing {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 23px;
+		label {
+			margin-bottom: 0 !important;
+		}
+	}
+}   
 .consultant-nav, .consultant-nav_w {
 	display: flex;
 	align-items: center;
@@ -4278,3 +4284,114 @@ form.articles input[type="submit"] {
 		}
 	}
 }
+
+/* page contacts */
+
+.main_contacts {
+	.services-article-top {
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 10px;
+	}
+	.contacts-box {
+	padding: 15px 25px 15px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	}
+	.contacts__phone {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 10px;
+			span {
+				color: #000;
+				font-size: 22px;
+				font-weight: bold;
+				padding-right: 5px;
+			}
+		}
+		.contacts-box-top {
+			display: inline-block;
+			padding-bottom: 20px;
+		}
+		.free-question {
+			text-transform: none;
+			padding-left: 0;
+			display: inline-flex;
+			vertical-align: top;
+			margin-left: 7%;
+			margin-bottom: 15px;
+		}	
+		.contacts-box-social {
+			display: flex;
+			flex-wrap: wrap;
+			border-top: 1px solid #ccc;
+			padding-top: 20px;
+		}
+		.contacts__adress {
+			font-size: 18px;
+			font-weight: 500;
+			margin: 20px 0;
+		}
+		 
+		[class^="box-social"], 
+		[class^="contacts-options"] {
+			margin-right: 5%;
+			margin-bottom: 10px;
+			color: #000;
+			&:last-child {
+				margin-right: 0;
+			}
+			span {
+				font-size: 16px;
+			}
+			i {
+				margin-right: 5px;
+			}
+		}
+		.map-contacts-options {
+			margin: 15px 0;
+		}
+		.map-contacts-body iframe {
+			width: 100%;
+			height: 25vw;
+			min-height: 300px
+		}
+		.social-invite {
+			display: inline-block;
+			width: 100%;
+			h3 {
+				margin: 20px 0;
+			}
+			iframe {
+				width: 49%;
+				float: left;
+				min-height: 400px;
+				&:first-of-type {
+					margin-right: 2%;
+				}
+			}
+		}
+	.card-form h2 {
+		padding-bottom: 15px;
+	}	
+	.popup-form__phone {
+		margin-right: 0;
+	}
+	.services-sidebar {
+		.free-question {
+			margin-left: 0;
+			padding-left: 20px;
+		}
+
+	}
+	.bottom-articles-col {
+		margin-top: 20px;
+	}
+	.bottom-articles-item {
+	    margin-top: 20px;
+	}
+	.services-article {
+		flex-wrap: wrap;
+	}
+} 
+ 
