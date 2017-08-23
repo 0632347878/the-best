@@ -219,13 +219,16 @@
     margin-bottom: 20px;
     margin-top: 10px;
   }
-  .card-item .card-form form .popup-form__name,
-  .card-item .card-form form .popup-form__agent,
-  .card-item .card-form form .popup-form__phone,
-  .card-item .card-form form .popup-form__mail {
+  .card-form form .popup-form__name,
+  .card-form form .popup-form__agent,
+  .card-form form .popup-form__phone,
+  .card-form form .popup-form__mail {
     width: 100%;
     max-width: 100% !important;
     margin-right: 0;
+  }
+  .main_contacts .social-invite {
+    display: none;
   }
 }
 @media all and (max-width: 992px) {
@@ -373,18 +376,18 @@
   .main_card .card-item-title h2 {
     margin-bottom: 15px;
   }
-  .main_card .card-item .card-form {
+  .main_card .card-form {
     background: none;
     padding: 20px 20px 70px 35px;
   }
-  .main_card .card-item .card-form .popup-form__name,
-  .main_card .card-item .card-form .popup-form__agent,
-  .main_card .card-item .card-form .popup-form__phone,
-  .main_card .card-item .card-form .popup-form__mail {
+  .main_card .card-form .popup-form__name,
+  .main_card .card-form .popup-form__agent,
+  .main_card .card-form .popup-form__phone,
+  .main_card .card-form .popup-form__mail {
     width: 100%;
     max-width: 80%;
   }
-  .main_card .card-item .card-form .popup-form_orders {
+  .main_card .card-form .popup-form_orders {
     width: 100%;
     padding-left: 5%;
     margin-bottom: 10px;
@@ -427,6 +430,13 @@
   .services-article-w .all-consultations {
     margin-top: 10px;
     margin-bottom: 15px;
+  }
+  .main_contacts .services-sidebar {
+    padding-left: 15px;
+  }
+  .main_contacts .services-article-w {
+    margin-right: 0;
+    padding-right: 15px;
   }
 }
 @media all and (min-width: 992px) {
@@ -598,18 +608,18 @@
   .service-answer .service-answer_question {
     margin-bottom: 20px;
   }
-  .main_answer .card-form .popup-form__name,
-  .main_answer .card-form .popup-form__agent,
-  .main_answer .card-form .popup-form__mail,
-  .main_answer .card-form .popup-form__phone {
+  .card-form .popup-form__name,
+  .card-form .popup-form__agent,
+  .card-form .popup-form__mail,
+  .card-form .popup-form__phone {
     width: 100% !important;
     margin-right: 0 !important;
   }
-  .main_answer .services-article-w {
+  .services-article-w {
     margin-right: 0;
-    padding: 0 7px;
+    /* padding: 0 7px; */
   }
-  .main_answer .card-form {
+  .card-form {
     padding: 15px 20px;
   }
   .main_partner .services-sidebar {
@@ -906,7 +916,7 @@
   }
   .services-article-w {
     margin-right: 0;
-    padding: 0 7px;
+    /* padding: 0 7px; */
   }
   .card-item .card-form form input[type="checkbox"] + label {
     padding-left: 0;

@@ -28,3 +28,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'fontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/fontawesome-webfont.woff') format('woff'),
+     url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+     url('../fonts/fontawesome-webfont.svg#fontAwesome') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
