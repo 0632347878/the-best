@@ -404,8 +404,8 @@
   .main_service .card-item_main {
     flex-wrap: wrap;
   }
-  .main_answer .services-sidebar {
-    padding: 7px;
+  .services-sidebar {
+    /*  padding: 7px; */
   }
   /*.main_partner {
 		.services-article {
@@ -437,6 +437,9 @@
   .main_contacts .services-article-w {
     margin-right: 0;
     padding-right: 15px;
+  }
+  .services-article {
+    flex-wrap: wrap;
   }
 }
 @media all and (min-width: 992px) {
@@ -487,6 +490,9 @@
     -webkit-box-ordinal-group: 7;
     -ms-flex-order: 6;
     order: 6;
+  }
+  .main_news-list .bottom-articles-col {
+    min-width: 380px;
   }
 }
 @media all and (max-width: 768px) {
@@ -617,7 +623,7 @@
   }
   .services-article-w {
     margin-right: 0;
-    /* padding: 0 7px; */
+    padding: 0 15px;
   }
   .card-form {
     padding: 15px 20px;
@@ -630,6 +636,22 @@
   }
   .main_card .card-item .card-form .popup-form__btn {
     margin: 20px auto 0;
+  }
+  .bottom-articles-col {
+    flex-basis: 100% !important;
+  }
+  .news-mailing {
+    flex-direction: column;
+  }
+  .news-mailing form {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .news-mailing h4.heading3-18 {
+    width: 100%;
+  }
+  .news-data_left {
+    margin-bottom: 7px;
   }
 }
 @media all and (min-width: 640px) {
@@ -799,6 +821,19 @@
   .services-article-w .all-consultations + .free-question {
     margin: 0 auto;
   }
+  .news-item_data {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .news-data_right {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .news-data_right a {
+    min-width: 85px;
+    text-align: center;
+  }
 }
 @media all and (max-width: 480px) {
   .main_service .services-advantages .services-advantages-col {
@@ -922,6 +957,22 @@
     padding-left: 0;
     padding-top: 25px;
   }
+  .main_answer .popup-form .popup-form__btn {
+    margin: 20px auto !important;
+  }
+  .news-mailing {
+    padding: 15px;
+  }
+  .news-mailing form {
+    align-items: center;
+    flex-direction: column;
+  }
+  .news-mailing .popup-form__btn {
+    margin: 10px auto 0;
+  }
+  .news-mailing .nice-select {
+    width: 100%;
+  }
 }
 @media all and (max-width: 992px) and (min-width: 359px) {
   .search-w .realty,
@@ -932,11 +983,6 @@
   .search-w input[type="submit"] {
     margin-left: 5px;
     margin-right: 5px;
-  }
-}
-@media all and (max-width: 480px) {
-  .main_answer .popup-form .popup-form__btn {
-    margin: 20px auto !important;
   }
 }
 @media all and (max-width: 479px) {

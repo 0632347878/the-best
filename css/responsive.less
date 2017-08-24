@@ -465,11 +465,11 @@
 		  	flex-wrap: wrap; 
 		  }
 		} 
-		.main_answer {
-			.services-sidebar {
-				    padding: 7px;
-			}
-		}
+		
+	.services-sidebar {
+		   /*  padding: 7px; */
+	}
+		
 	/*.main_partner {
 		.services-article {
 
@@ -512,6 +512,10 @@
 			padding-right: 15px;
 		}
 	}
+	.services-article {
+		flex-wrap: wrap;
+	}
+	 
 }
 
 @media all and (min-width: 992px) {
@@ -579,6 +583,11 @@
 			    -ms-flex-order: 6;
 			        order: 6;
 		}
+	}
+	.main_news-list {
+		.bottom-articles-col {
+			min-width: 380px;
+		}		
 	}
 }
 @media all and (max-width: 768px) {
@@ -732,7 +741,7 @@
 	
 		.services-article-w {
 			margin-right: 0;
-			/* padding: 0 7px; */
+			 padding: 0 15px; 
 		}
 		.card-form {
 			padding: 15px 20px;
@@ -757,6 +766,22 @@
 			}
 		}
 	}
+	.bottom-articles-col {
+		flex-basis: 100% !important;
+	}
+	.news-mailing {
+		flex-direction: column;
+		form {
+			margin-top: 15px;
+			width: 100%;
+		}
+		h4.heading3-18 {
+			width: 100%;
+		}
+	}
+	.news-data_left {
+		margin-bottom: 7px;
+	}
 }
 @media all and (min-width: 640px) {
 	.consultants-item {
@@ -767,6 +792,7 @@
 			margin-right: 0;
 		}
 	}
+
 }
 @media all and (max-width: 640px) {
 	.hot-proposition + .fresh-realty h2 {
@@ -914,6 +940,20 @@
 			margin: 0 auto;
 		}
 	}
+	.news-item_data {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.news-data_right {
+	flex-wrap: wrap;
+	flex-direction: column;
+		margin-top: 10px;
+	}
+	.news-data_right a {
+		min-width: 85px;
+		text-align: center;
+	}
+
 }
 
 @media all and (max-width: 480px) {
@@ -1065,6 +1105,26 @@
 		padding-left: 0;
 		padding-top: 25px;
 	}
+	.main_answer {
+		.popup-form {
+			.popup-form__btn {
+				margin: 20px auto !important;
+			}
+		}
+	}
+	.news-mailing {
+		padding: 15px;
+		form {
+			align-items: center;
+			flex-direction: column;
+			}
+		.popup-form__btn {
+			margin: 10px auto 0;
+		}
+		.nice-select {
+			width: 100%;
+		}
+		} 
 }
 
 @media all and (max-width: 992px) and (min-width: 359px) {
@@ -1074,15 +1134,7 @@
 		margin-right: 5px;
 	}
 }
-@media all and (max-width: 480px) {
-	.main_answer {
-		.popup-form {
-			.popup-form__btn {
-				margin: 20px auto !important;
-			}
-		}
-	}
-}
+
 @media all and (max-width: 479px) {
 	.main_favorite .services-article-w, .main_favorite .propositions-col  {
 		padding-left: 5px;
