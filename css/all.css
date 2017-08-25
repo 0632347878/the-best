@@ -3113,7 +3113,6 @@ form.articles input[type="submit"]:hover {
   margin-bottom: 30px;
   max-width: 350px;
 }
-.card-form form .popup-form__mail,
 .card-form form .popup-form__agent {
   margin-right: 0;
 }
@@ -3784,7 +3783,7 @@ form.articles input[type="submit"]:hover {
   padding: 0;
 }
 .main_answer .popup-form__mail {
-  margin-right: 20px !important;
+  margin-right: 20px ;
 }
 .main_answer .popup-form__phone {
   margin-right: 0 !important;
@@ -4035,6 +4034,9 @@ form.articles input[type="submit"]:hover {
   position: relative;
   top: -5px;
 }
+.main_card .popup-form__mail {
+  margin-right: 0 !important;
+}
 /* page contacts */
 .main_contacts .services-article-top {
   flex-direction: column;
@@ -4125,7 +4127,7 @@ form.articles input[type="submit"]:hover {
   padding-bottom: 15px;
 }
 .main_contacts .popup-form__phone {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 .main_contacts .services-sidebar .free-question {
   margin-left: 0;
@@ -4424,4 +4426,10 @@ form.articles input[type="submit"]:hover {
 .portal-article-media .article-media__desc p {
   font-style: italic;
   text-shadow: 0.01px 0.01px 0.1px #333;
+}
+/* page catalog */
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
 }

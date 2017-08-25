@@ -5,9 +5,20 @@
 			white-space: nowrap;
 		}
 	}
-	.popup-form__agent, .popup-form__phone {
-		margin-left: auto;
+	.main_contacts,
+	.main_answer {
+		.popup-form__agent, .popup-form__phone {
+			margin-left: auto;
+		}
 	}
+	.main_card {
+		.popup-form__mail, .popup-form__agent  {
+			margin-left: auto;
+		}
+	}
+
+
+
 
 }
 
@@ -276,6 +287,7 @@
 			padding-right: 0;
 		}
 	}
+
 	
 }
 
@@ -454,7 +466,7 @@
 	    }
 	    
     .card-form {	
-    background: none;
+    /* background: none; */
     padding: 20px 20px 70px 35px;    	    	
 	    .popup-form__name, .popup-form__agent, .popup-form__phone, .popup-form__mail {
 	    	width: 100%;
@@ -824,7 +836,12 @@
 			padding-left: 0;
 		}	
 	}
-	
+	.main_service {
+		.services-list2 {
+			justify-content: center;
+		}
+	}
+
 }
 @media all and (min-width: 640px) {
 	.consultants-item {
@@ -990,7 +1007,10 @@
 	.news-data_right {
 	flex-wrap: wrap;
 	flex-direction: column;
-		margin-top: 10px;
+	margin-top: 10px;
+		[class^="data_right"] {
+			margin-bottom: 5px;
+		}
 	}
 	.news-data_right a {
 		min-width: 85px;
@@ -1071,11 +1091,7 @@
 	.main_service .partners-links .partners-links__item {
 		margin: 0 auto 25px
 	}
-	.main_service {
-		.card-item {
-			padding: 0 5px;
-		}
-	}
+
 
 	.services-list2 .services-list2-col {
 		min-width: 300px !important;
