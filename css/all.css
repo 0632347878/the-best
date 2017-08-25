@@ -1410,7 +1410,7 @@ section.services .services-list__title {
   margin: 0 auto;
 }
 .rewards .rewards-slider {
-  margin: 35px auto 65px;
+  margin: 35px auto 50px;
 }
 .free-question {
   min-height: 50px;
@@ -2377,7 +2377,7 @@ form.articles input[type="submit"]:hover {
   font-weight: 500;
   text-align: center;
   margin-bottom: 35px;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .services-sidebar .free-question {
   max-width: 265px;
@@ -2904,26 +2904,31 @@ form.articles input[type="submit"]:hover {
   padding-left: 10px;
   min-width: 225px;
 }
-.main_news .services-sidebar__news {
+.services-sidebar__news {
   padding: 26px 18px 32px 23px;
   background-color: #dff2f8;
   border: 1px #0099cc solid;
   margin-bottom: 20px;
 }
-.main_news .services-sidebar__news h4 {
+.services-sidebar__news h4 {
   color: #0e2470;
   font-weight: bold;
   font-size: 18px;
 }
-.main_news .services-sidebar__news h4:after {
+.services-sidebar__news h4:after {
   display: none;
 }
-.main_news .services-sidebar__news .sidebar__news-list li {
-  margin: 10px 0;
+.services-sidebar__news .sidebar__news-list li {
   display: flex;
   justify-content: space-between;
 }
-.main_news .services-sidebar__news .sidebar__news-list .sidebat-news__count {
+.services-sidebar__news .sidebar__news-list li:not(:last-child) {
+  margin: 10px 0;
+}
+.services-sidebar__news .sidebar__news-list li a:hover {
+  text-decoration: underline;
+}
+.services-sidebar__news .sidebar__news-list .sidebat-news__count {
   color: #999;
 }
 .main_card .propositions-group {
@@ -3217,10 +3222,6 @@ form.articles input[type="submit"]:hover {
   justify-content: center;
 }
 .main_service .card-item_main .services-sidebar__question .free-question {
-  margin: 0 auto;
-}
-.main_service .card-item_main .portal-sidebar-item img {
-  max-width: 500px;
   margin: 0 auto;
 }
 .main_service .sidebar-item__position {
@@ -3536,6 +3537,10 @@ form.articles input[type="submit"]:hover {
 .service-call h5 p:last-child {
   margin-top: 18px;
 }
+.portal-sidebar-item img {
+  max-width: 500px;
+  margin: 0 auto;
+}
 .service-answer .service-answer-sidebar {
   margin-right: 3.5%;
 }
@@ -3673,7 +3678,7 @@ form.articles input[type="submit"]:hover {
   transition: .3s;
   background-color: #fedfa0;
 }
-/* answer on cuestion */
+/* answer on question */
 .main_answer h1 {
   color: #0e2470;
   font-size: 30px;
@@ -3870,15 +3875,6 @@ form.articles input[type="submit"]:hover {
   max-width: 115px;
   background-color: #0088cf;
   color: #fff;
-  /*&:after {
-			content: ">";
-			margin-left: 4px;
-			transform: rotate(90deg);
-			font-size: 18px;
-			position: relative;
-			bottom: -2px;
-			
-		}*/
 }
 .consultant-nav_social,
 .consultant-nav {
@@ -4323,4 +4319,109 @@ form.articles input[type="submit"]:hover {
 }
 .main_news-list .bottom-articles-col .col__title-link {
   margin: 10px 0;
+}
+/* page about */
+.main_about .portal-article,
+.main_about .services {
+  margin-top: 0;
+}
+.main_about .portal-article-bottom {
+  margin-top: 25px;
+}
+.main_about .services {
+  margin-bottom: 20px;
+}
+.main_about .rewards__heading,
+.main_about .rewards__heading + p {
+  padding: 0 15px;
+}
+.main_about .rewards__heading {
+  padding-bottom: 15px;
+}
+.main_about .rewards .swiper-slide img {
+  max-height: 155px;
+  max-width: 110px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main_about .rewards .heading3-18 {
+  padding: 20px 0;
+  color: #0e2470;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main_about .swiper-container7 {
+  height: 165px;
+  max-width: 840px;
+  position: relative;
+  overflow: hidden;
+}
+.main_about .swiper-container6 {
+  max-width: 840px;
+}
+.main_about .swiper-button-next {
+  transform: rotate(180deg);
+  right: 0;
+  position: absolute;
+  width: 17px;
+  height: 32px;
+  background: url(../images/reward-arrow-l.png) no-repeat;
+  cursor: pointer;
+  top: 50%;
+  z-index: 20;
+}
+.main_about .swiper-button-prev {
+  left: 0;
+  position: absolute;
+  width: 17px;
+  height: 32px;
+  background: url(../images/reward-arrow-l.png) no-repeat;
+  cursor: pointer;
+  top: 50%;
+  z-index: 20;
+  right: auto;
+}
+.main_about .partners {
+  padding-left: 0;
+  padding-right: 0;
+}
+.main_about .partners h2 {
+  padding-bottom: 30px;
+}
+.main_about .portal-sidebar .rewards__heading {
+  padding: 0 0 5px;
+}
+.main_about .services-sidebar__question {
+  margin-bottom: 40px;
+}
+.main_about .services-sidebar h3 {
+  min-height: auto;
+}
+.main_about .services-sidebar h3:after {
+  display: none;
+}
+.main_about .portal-sidebar-top h3 {
+  margin-bottom: 0;
+}
+.portal-article-media {
+  display: flex;
+  margin-top: 20px;
+}
+.portal-article-media strong {
+  font-weight: 500;
+}
+.portal-article-media .article-media__clip {
+  padding-right: 20px;
+  flex: 1 1 80%;
+}
+.portal-article-media .article-media__clip iframe {
+  width: 100%;
+}
+.portal-article-media .article-media__desc {
+  flex: 1 1 20%;
+}
+.portal-article-media .article-media__desc p {
+  font-style: italic;
+  text-shadow: 0.01px 0.01px 0.1px #333;
 }

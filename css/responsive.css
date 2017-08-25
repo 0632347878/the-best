@@ -230,6 +230,24 @@
   .main_contacts .social-invite {
     display: none;
   }
+  .swiper-container6 {
+    margin: 0 auto;
+  }
+  .portal-article-media {
+    flex-direction: column;
+  }
+  .main_about .portal-article-w {
+    margin-right: 0;
+  }
+  .main_about .portal-article {
+    padding-right: 15px;
+  }
+  .main_about .article-media__clip {
+    padding-right: 0;
+  }
+  .main_about .portal-sidebar {
+    padding-right: 0;
+  }
 }
 @media all and (max-width: 992px) {
   /*menu-gamburger*/
@@ -441,6 +459,10 @@
   .services-article {
     flex-wrap: wrap;
   }
+  .main_about .portal-article {
+    padding-right: 15px;
+    display: block;
+  }
 }
 @media all and (min-width: 992px) {
   .main_partner .services-article-w {
@@ -493,6 +515,9 @@
   }
   .main_news-list .bottom-articles-col {
     min-width: 380px;
+  }
+  .article-media__clip iframe {
+    min-height: 375px;
   }
 }
 @media all and (max-width: 768px) {
@@ -652,6 +677,12 @@
   }
   .news-data_left {
     margin-bottom: 7px;
+  }
+  .article-media__clip iframe {
+    min-height: 300px;
+  }
+  .main_about .services-sidebar {
+    padding-left: 0;
   }
 }
 @media all and (min-width: 640px) {
@@ -972,6 +1003,12 @@
   }
   .news-mailing .nice-select {
     width: 100%;
+  }
+  .popup-wrapper,
+  .question-popup,
+  .review-popup {
+    height: 100%;
+    margin: 5px 0;
   }
 }
 @media all and (max-width: 992px) and (min-width: 359px) {
