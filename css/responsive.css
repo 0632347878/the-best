@@ -865,6 +865,12 @@
     min-width: 85px;
     text-align: center;
   }
+  .popup-wrapper,
+  .question-popup,
+  .review-popup {
+    height: 95%;
+    margin: 5px 0;
+  }
 }
 @media all and (max-width: 480px) {
   .main_service .services-advantages .services-advantages-col {
@@ -1003,12 +1009,6 @@
   }
   .news-mailing .nice-select {
     width: 100%;
-  }
-  .popup-wrapper,
-  .question-popup,
-  .review-popup {
-    height: 100%;
-    margin: 5px 0;
   }
 }
 @media all and (max-width: 992px) and (min-width: 359px) {
