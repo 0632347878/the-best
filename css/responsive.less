@@ -93,7 +93,7 @@
 			margin-right: 2%;
 		}
 		.description-slider {
-			width: 28%;
+			/* width: 28%; */
 			div {
 				font-size: 16px;
 				min-height: 90px;
@@ -371,6 +371,7 @@
 	.section-slider {
 		.main-slider {
 			width: 100%;
+			float: none;
 		}
 		.description-slider {
 			width: 100%;
@@ -552,6 +553,15 @@
 			padding-right: 15px;
 			display: block;
 			
+		}
+	}
+	.main_catalog {
+		.services-article-w {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.services-article {
+			flex-direction: column;
 		}
 	}
 }
@@ -1020,6 +1030,21 @@
 		height: 95%;
 		margin: 5px 0;
 	}
+	.main_catalog {
+		.propositions-result {
+			margin-top: 10px;
+		}
+		.catalog-filter {
+			[class^="catalog-filter_"] {
+				
+				margin: 0 5px 10px;
+			}
+		}
+		.catalog-filter .catalog-filter_quantity {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	} 
 }
 
 @media all and (max-width: 480px) {
