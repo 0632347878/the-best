@@ -717,6 +717,32 @@
     display: flex;
     align-items: center;
   }
+  .propositions-list-item {
+    width: 260px;
+  }
+  .propositions-list-item .effect-julia,
+  .propositions-list-item .propositions-item-left,
+  .propositions-list-item .propositions-item-right {
+    width: 100%;
+  }
+  .propositions-list-item .propositions-item-left {
+    margin: 10px -10px 10px;
+  }
+  .propositions-list-item .propositions-item-right {
+    margin-bottom: 10px;
+  }
+  .propositions-list-item .propositions-item-right .cost-line {
+    display: flex;
+  }
+  .propositions-list-item .propositions-item-right .list-agent-send {
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+  }
+  .propositions-list-item .propositions-item-bottom .propositions-item-onmap {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
 }
 @media all and (min-width: 640px) {
   .consultants-item:nth-child(n+1) {

@@ -383,56 +383,48 @@
               <a onclick="myPopupReview()" href="javascript:void(0)" class="services-add-reviws">Добавить отзыв</a>
             </div>
             <div class="review-popup">
-              <h2>Задайте свой вопрос агенту по недвижимости</h2>
-              <p>Ваши контактные данные не будут опубликованы на сайте</p>
-              <form class="popup-form" action="">
-                <div class="add_question">
-                  <label>Текст отзыва</label>
-                  <textarea name="text"></textarea>
-                </div>
-                <div class="popup-form__name">
-                  <label>Ф. И. О.</label>
-                  <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
-                  <p>Так мы будем знать, как к вам обращаться</p>
-                </div>
-                <div class="popup-form__agent">
-                  <label>Выберите раздел вопроса</label>
-                  <select class="sixth-select" style="display: none;">
-                    <option data-display="Казарин Леонид">Nothing</option>
-                    <option value="1">Some option</option>
-                    <option value="2">Another option</option>
-                    <option value="3" disabled="">A disabled option</option>
-                    <option value="4">Potato</option>
-                  </select>
-                  <div class="nice-select sixth-select" tabindex="0"><span class="current">Казарин Леонид</span>
-                    <ul class="list">
-                      <li data-value="Nothing" data-display="Казарин Леонид" class="option selected">Nothing</li>
-                      <li data-value="1" class="option">Some option</li>
-                      <li data-value="2" class="option">Another option</li>
-                      <li data-value="3" class="option disabled">A disabled option</li>
-                      <li data-value="4" class="option">Potato</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="popup-form__mail">
-                  <label>Е-mail (электронная почта)</label>
-                  <input class="nice-select" type="text" placeholder="@">
-                  <p>Обязательно. На этот адрес придет ответ на отзыв</p>
-                </div>
-                <div class="popup-form__phone">
-                  <label>Телефон</label>
-                  <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
-                  <p>Необязательно. Но мы можем вам позвонить, чтобы ответить на отзыв</p>
-                </div>
-                <div class="popup-form__mailing">
-                  <input type="checkbox" id="box-5">
-                  <label for="box-5">Подписаться на ежемесячную новостную рассылку</label>
-                </div>
-                <input type="submit" class="popup-form__btn" value="Отправить вопрос">
-                <p class="review__desc">Отзывы обрабатываются в будни с 9 до 21, в выходные с 10 до 17.</p>
-              </form>
-              <span class="fa fa-times close" id="review-close"></span>
-            </div>
+                        <h2>Добавить отзыв об агентстве и агенте недвижимости</h2>
+                        <p>Ваши контактные данные не будут опубликованы на сайте</p>
+                        <form class="popup-form" action="">
+                          <div class="add_question">
+                            <label>Текст отзыва</label>
+                            <textarea name="text"></textarea>
+                          </div>
+                          <div class="popup-form__name">
+                            <label>Ваше имя</label>
+                            <input class="nice-select" type="text" placeholder="Хмелевская Анастасия Павловна">
+                            <p>Так мы будем знать, как к вам обращаться</p>
+                          </div>
+                          <div class="popup-form__agent">
+                            <label>Выберите агента</label>
+                            <select class="sixth-select">
+                              <option data-display="Не выбрано">Nothing</option>
+                              <option value="1">Some option</option>
+                              <option value="2">Another option</option>
+                              <option value="3" disabled>A disabled option</option>
+                              <option value="4">Potato</option>
+                            </select>
+                          </div>
+                          <div class="popup-form__mail">
+                            <label>Е-mail (электронная почта)</label>
+                            <input class="nice-select" type="text" placeholder="@">
+                            <p>Обязательно. На этот адрес придет ответ на отзыв</p>
+                          </div>
+                          <div class="popup-form__phone">
+                            <label>Телефон</label>
+                            <input class="nice-select" type="text" placeholder="+7 (---) ХХХ-ХХ-ХХ">
+                            <p>Необязательно. Но мы можем вам позвонить, чтобы ответить на отзыв</p>
+                          </div>
+                          <div class="popup-form__mailing">
+                            <input type="checkbox" id="box-5">
+                            <label for="box-5">Подписаться на ежемесячную новостную рассылку</label>
+                          </div>
+                          <input type="submit" class="popup-form__btn" value="Отправить отзыв">
+                          </input>
+                          <p class="review__desc">Отзывы обрабатываются в будни с 9 до 21, в выходные с 10 до 17.</p>
+                        </form>
+                        <span class="fa fa-times close" id="review-close"></span>
+                      </div>
           </div>
         </div>
       </div>
@@ -596,13 +588,13 @@
                   </div>
                   <div class="popup-form__agent">
                     <label>Выберите раздел вопроса</label>
-                    <select class="fifth-select" style="display: none;">
-                      <option data-display="Казарин Леонид">Nothing</option>
+                    <select class="fifth-select">
+                      <option data-display="Не выбран">Nothing</option>
                       <option value="1">Some option</option>
                       <option value="2">Another option</option>
-                      <option value="3" disabled="">A disabled option</option>
+                      <option value="3" disabled>A disabled option</option>
                       <option value="4">Potato</option>
-                    </select><div class="nice-select fifth-select" tabindex="0"><span class="current">Казарин Леонид</span><ul class="list"><li data-value="Nothing" data-display="Казарин Леонид" class="option selected">Nothing</li><li data-value="1" class="option">Some option</li><li data-value="2" class="option">Another option</li><li data-value="3" class="option disabled">A disabled option</li><li data-value="4" class="option">Potato</li></ul></div>
+                    </select>
                   </div>
                   <div class="popup-form__mail">
                     <label>Е-mail (электронная почта)</label>

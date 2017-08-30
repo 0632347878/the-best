@@ -458,14 +458,13 @@ var popupBtnSearch = document.getElementById("more-options");
 var popupSearch    = document.querySelector(".popup-search");
 var closeSpanSearch    = document.querySelector(".search-close");
 
-	function myPopupQuestion(){
+	function myPopupSearch(){
 		if(!(closeSpanSearch == null)) {
 		popupSearch.classList.add("fadeInDown");
 
 			if (window.matchMedia('(max-width: 992px)').matches) {
 				$('body').css('overflow', 'hidden');
-				$('.question-popup').css({'overflow-x': 'hidden', "bottom":"0"});
-				
+				$('.question-popup').css({'overflow-x': 'hidden', "bottom":"0"});		
 			}
 		}
   }
