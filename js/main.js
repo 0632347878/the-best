@@ -422,7 +422,6 @@ closeSpanQuestion.addEventListener('click', closeQuestion);
 
 /*review*/
 
-
 var popupReview    = document.querySelector(".review-popup");
 var closeSpanReview    = document.getElementById("review-close");
 
@@ -433,7 +432,6 @@ var closeSpanReview    = document.getElementById("review-close");
 		if (window.matchMedia('(max-width: 992px)').matches) {
 			$('body').css('overflow', 'hidden');
 			$('.review-popup').css({'overflow-x': 'hidden', "bottom":"0"});
-			
 		}
   }
 
@@ -444,7 +442,6 @@ var closeSpanReview    = document.getElementById("review-close");
 		if (window.matchMedia('(max-width: 992px)').matches) {
 			$("body").css("overflow", "inherit");
 			$('.question-popup').css({'overflow-x': 'inherit', "bottom":"auto"});
-			
 		}
 
 		setTimeout(function() {
@@ -454,6 +451,46 @@ var closeSpanReview    = document.getElementById("review-close");
 
 closeSpanReview.addEventListener('click', closeReview);
 }
+
+/* popup-search */
+
+var popupBtnSearch = document.getElementById("more-options");
+var popupSearch    = document.querySelector(".popup-search");
+var closeSpanSearch    = document.querySelector(".search-close");
+
+	function myPopupQuestion(){
+		if(!(closeSpanSearch == null)) {
+		popupSearch.classList.add("fadeInDown");
+
+			if (window.matchMedia('(max-width: 992px)').matches) {
+				$('body').css('overflow', 'hidden');
+				$('.question-popup').css({'overflow-x': 'hidden', "bottom":"0"});
+				
+			}
+		}
+  }
+
+		if(!(closeSpanSearch == null)) {
+		function closeSearch() {
+			popupSearch.classList.add("fadeInDownReverce");
+			popupSearch.classList.remove("fadeInDown"); 
+			setTimeout(function() {
+			popupSearch.classList.remove("fadeInDownReverce");
+			}, 1000);
+
+			if (window.matchMedia('(max-width: 992px)').matches) {
+				$("body").css("overflow", "inherit");
+				$('.question-popup').css({'overflow-x': 'inherit', "bottom":"auto"});
+				
+			}
+		}
+		closeSpanSearch.addEventListener('click', closeSearch);
+}
+
+
+
+/* end popup-search */
+
 
   /* -------------------------  */
  /* ---------GO-TO-----------  */ 
@@ -484,10 +521,27 @@ if(!( myClick == null )) {
 }
 
 
-$('.refresh').click(function(){
+$('.refresh').click(function() {
 	$(this).addClass('hidden');
 });
 
 
 
+// search on map additional
 
+window.addEventListener("DOMContentLoaded", (function() {
+
+var btnAdditional = document.querySelector('.more-panel');
+
+ if(!(btnAdditional == null)) {
+ 	
+ 	var btnSearchMore = document.querySelector('#more-options');
+ 		function viewMore() {
+ 			btnSearchMore.style.display = "inline-block";
+ 		}
+ 	btnAdditional.addEventListener('click', viewMore);	
+ }
+
+}));
+
+// end search on map additional
